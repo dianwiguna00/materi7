@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 11</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu melihat bentuk seperti 3x + 2x? Mengapa hurufnya bisa digabung?</li>
+  <li>Jika kamu memiliki beberapa barang sejenis, bagaimana cara menghitung jumlah keseluruhannya dengan lebih singkat?</li>
+  <li>Menurutmu, apa yang terjadi jika kita menjumlahkan atau mengurangkan bentuk aljabar yang berbeda?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Menjumlahkan jumlah barang sejenis, seperti jumlah pensil merah dan pensil merah lainnya.</li>
+  <li>Menghitung total uang dari beberapa pengeluaran yang sejenis.</li>
+  <li>Mengelompokkan barang berdasarkan jenisnya untuk mempermudah perhitungan.</li>
+  <li>Menyederhanakan catatan jumlah barang atau biaya agar lebih ringkas.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Menyelesaikan operasi penjumlahan dan pengurangan bentuk aljabar.</li>
+  <li>Menyederhanakan bentuk aljabar dengan menggabungkan suku sejenis.</li>
+  <li>Merefleksikan strategi dalam menyelesaikan operasi bentuk aljabar.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati beberapa contoh bentuk aljabar yang terdiri dari suku-suku sejenis dan tidak sejenis.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menentukan suku-suku yang dapat digabungkan.</li>
+  <li>Siswa menuliskan hasil penyederhanaan dengan menggabungkan suku sejenis.</li>
+  <li>Siswa mengerjakan latihan singkat secara individu untuk menerapkan penjumlahan dan pengurangan bentuk aljabar.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 <strong>Suku Sejenis</strong><br><br>
+
+Suku-suku dalam bentuk aljabar yang memiliki variabel dan pangkat yang sama.<br><br>
+
+3x dan –5x adalah suku sejenis.<br>
+2a² dan 7a² adalah suku sejenis.<br>
+4x dan 2y bukan suku sejenis.<br><br>
+
+🔹 <strong>Penjumlahan dan Pengurangan Bentuk Aljabar</strong><br><br>
+
+Gabungkan suku sejenis dengan menjumlahkan atau mengurangkan koefisiennya.<br>
+Variabel tetap.<br><br>
+
+Contoh:<br>
+5x + 3x = 8x<br>
+7a – 2a = 5a<br>
+4x + 2y – x + 3y = (4x – x) + (2y + 3y) = 3x + 5y
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal 1</strong><br><br>
+
+Sederhanakan: 6x + 4x – 3x<br><br>
+
+Jawaban:<br>
+Gabungkan suku sejenis: (6x + 4x – 3x) = 7x<br><br>
+
+<strong>✅ Contoh Soal 2</strong><br><br>
+
+Sederhanakan: 2a + 3b – a + 5b<br><br>
+
+Jawaban:<br>
+Gabungkan suku sejenis: (2a – a) + (3b + 5b) = a + 8b
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Sederhanakan bentuk aljabar berikut:<br><br>
+
+a. 4x + 2x – x<br>
+b. 5m – 3m + 7m<br>
+c. 3a + 2b – a + b<br><br>
+
+Tentukan hasil dari operasi berikut:<br><br>
+
+a. (6y + 2x) – (3y + x)<br>
+b. (8p – 4q) + (2p + 5q)<br><br>
+
+Soal Kontekstual:<br><br>
+
+a. Seorang pedagang memiliki x buah apel dan membeli lagi 3x buah apel. Kemudian ia menjual 2x buah apel. Tuliskan bentuk aljabar jumlah apel yang tersisa.<br><br>
+
+b. Dalam satu minggu, seorang siswa belajar 2x jam pada hari Senin, x jam pada hari Selasa, dan 3x jam pada hari Rabu. Berapa total jam belajar dalam bentuk aljabar?
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Apa yang dimaksud dengan suku sejenis dalam bentuk aljabar?</li>
+  <li>Bagaimana kamu menyederhanakan bentuk aljabar dengan benar?</li>
+  <li>Dalam situasi apa kamu bisa menggunakan penjumlahan dan pengurangan bentuk aljabar di kehidupan nyata?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+
+</div>
+</div>
+</body>

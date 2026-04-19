@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 11</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+<li>Jika dua sudut berada bersebelahan dan membentuk sudut siku-siku, menurutmu apa hubungan kedua sudut tersebut?</li>
+<li>Saat melihat tangga atau rangka atap, sudut apa saja yang tampak saling berlawanan atau saling melengkapi?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati sudut pada persimpangan dua jalan yang saling berpotongan.</li>
+<li>Memperhatikan sudut pada rangka jendela atau pintu yang saling berhadapan.</li>
+<li>Mengamati sudut pada tangga, atap rumah, atau tiang listrik dengan kawat penyangga.</li>
+<li>Melihat sudut pada gambar bangunan, papan sudut, atau lipatan buku.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+Siswa dapat mengidentifikasi dan menyelesaikan masalah yang melibatkan sudut berseberangan, bertolak belakang, dan berpenyiku, serta menggunakan sifat-sifat sudut untuk menentukan besar sudut yang tidak diketahui.
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati gambar garis berpotongan dan garis sejajar yang dipotong transversal.</li>
+<li>Siswa berdiskusi dalam kelompok untuk mengidentifikasi pasangan sudut yang memiliki hubungan tertentu.</li>
+<li>Siswa menyampaikan hasil diskusi dengan menunjukkan pasangan sudut pada gambar.</li>
+<li>Siswa mengerjakan latihan individu untuk menentukan besar sudut menggunakan hubungan antar sudut.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+Sudut Bertolak Belakang<br>
+- Terbentuk ketika dua garis berpotongan.<br>
+- Letaknya saling berhadapan.<br>
+- Besar sudutnya sama.<br><br>
+Sudut Berseberangan (Dalam)<br>
+- Terbentuk oleh dua garis sejajar yang dipotong oleh transversal.<br>
+- Letaknya di dalam garis sejajar dan berseberangan terhadap transversal.<br>
+- Besar sudutnya sama.<br><br>
+Sudut Berpenyiku (Komplemen)<br>
+- Dua sudut yang jumlahnya 90°.<br>
+- Biasanya ditemukan pada sudut siku-siku yang dibagi dua.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+✅ Contoh Soal 1: Sudut Bertolak Belakang<br>
+Jika sudut A = 120°, dan sudut A bertolak belakang dengan sudut B, maka besar sudut B adalah...<br>
+Jawaban: Sudut B = 120° (karena bertolak belakang)<br><br>
+✅ Contoh Soal 2: Sudut Berpenyiku<br>
+Jika sudut C = 35°, dan sudut C berpenyiku dengan sudut D, maka besar sudut D adalah...<br>
+Jawaban: Sudut D = 90° − 35° = 55°<br><br>
+✅ Contoh Soal 3: Sudut Berseberangan Dalam<br>
+Dua garis sejajar dipotong oleh transversal. Jika sudut E = 75°, dan sudut F berseberangan dalam dengan sudut E, maka besar sudut F adalah...<br>
+Jawaban: Sudut F = 75°
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Jika sudut X dan sudut Y bertolak belakang, dan sudut X = 110°, tentukan besar sudut Y.<br><br>
+Sudut A dan sudut B berpenyiku. Jika sudut A = 48°, berapa besar sudut B?<br><br>
+Diketahui dua garis sejajar dipotong oleh transversal. Jika sudut P = 65°, dan sudut Q berseberangan dalam dengan sudut P, tentukan besar sudut Q.<br><br>
+Gambarlah dua garis berpotongan dan tandai sudut bertolak belakang. Ukur dan bandingkan besar sudutnya.<br><br>
+Gambarlah sudut siku-siku dan bagi menjadi dua sudut berpenyiku. Ukur masing-masing sudut.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+<li>Apa perbedaan antara sudut bertolak belakang dan sudut berpenyiku?</li>
+<li>Bagaimana kamu menggunakan sifat sudut untuk menyelesaikan soal tanpa penggaris busur?</li>
+<li>Di mana kamu bisa menemukan contoh sudut berpenyiku dalam kehidupan sehari-hari?</li>
+<li>Tuliskan satu jenis hubungan sudut yang kamu pelajari hari ini dan satu contoh nyata dari lingkunganmu.</li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+</body>

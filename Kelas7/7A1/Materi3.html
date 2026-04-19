@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 3</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu mengalami perubahan suhu dari panas ke dingin atau sebaliknya dalam satu hari?</li>
+  <li>Jika kamu kehilangan poin lalu mendapatkan poin lagi dalam sebuah permainan, bagaimana cara menghitung jumlah poin akhirnya?</li>
+  <li>Saat uang sakumu berkurang lalu bertambah lagi, bagaimana caramu mengetahui sisa uangmu?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Menghitung perubahan suhu udara, misalnya suhu turun beberapa derajat lalu naik kembali.</li>
+  <li>Menentukan total poin dalam permainan setelah mendapatkan dan kehilangan poin.</li>
+  <li>Menghitung naik-turun posisi lift dari lantai dasar ke bawah tanah lalu ke lantai atas.</li>
+  <li>Menentukan sisa uang setelah pengeluaran dan penambahan uang saku.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Memahami aturan penjumlahan dan pengurangan bilangan bulat.</li>
+  <li>Menyelesaikan soal penjumlahan dan pengurangan bilangan bulat dalam berbagai konteks.</li>
+  <li>Merefleksikan strategi yang digunakan dalam menyelesaikan operasi bilangan bulat.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati ilustrasi situasi sehari-hari yang melibatkan penjumlahan dan pengurangan bilangan bulat.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menentukan hasil operasi bilangan pada setiap situasi.</li>
+  <li>Siswa menuliskan langkah penyelesaian secara sederhana sesuai konteks yang diberikan.</li>
+  <li>Siswa mengerjakan latihan individu untuk menerapkan penjumlahan dan pengurangan bilangan bulat.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 <strong>Penjumlahan Bilangan Bulat</strong><br><br>
+
+Jika tanda sama → jumlahkan dan pertahankan tanda.<br>
+Contoh: (–3) + (–5) = –8<br><br>
+
+Jika tanda berbeda → kurangkan dan ambil tanda bilangan yang lebih besar.<br>
+Contoh: (–7) + 4 = –3<br><br>
+
+🔹 <strong>Pengurangan Bilangan Bulat</strong><br><br>
+
+Ubah pengurangan menjadi penjumlahan dengan lawan bilangan.<br>
+Contoh: 5 – (–3) = 5 + 3 = 8<br>
+Contoh: (–4) – 6 = (–4) + (–6) = –10
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal 1: Penjumlahan</strong><br><br>
+
+Hitung: (–6) + 9<br><br>
+
+Jawaban: Tanda berbeda → 9 – 6 = 3 → karena 9 lebih besar dan positif, hasilnya 3<br><br>
+
+<strong>✅ Contoh Soal 2: Pengurangan</strong><br><br>
+
+Hitung: (–5) – (–2)<br><br>
+
+Jawaban: Ubah jadi: (–5) + 2 = –3
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+<strong>Penjumlahan:</strong><br><br>
+
+(–8) + (–4) = …<br>
+7 + (–10) = …<br>
+(–3) + 5 = …<br><br>
+
+<strong>Pengurangan:</strong><br><br>
+
+6 – (–2) = …<br>
+(–9) – 3 = …<br>
+(–7) – (–5) = …<br><br>
+
+<strong>Soal Kontekstual:</strong><br><br>
+
+Seorang pemain kehilangan 5 poin, lalu mendapatkan 8 poin. Berapa total poinnya?<br><br>
+
+Suhu awal –2°C, turun 4°C lagi. Berapa suhu sekarang?
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Apa strategi yang kamu gunakan untuk menyelesaikan soal penjumlahan dan pengurangan bilangan bulat?</li>
+  <li>Bagaimana kamu membedakan antara penjumlahan dan pengurangan bilangan negatif?</li>
+  <li>Dalam situasi apa kamu pernah menggunakan operasi bilangan bulat?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+
+</div>
+</div>
+</body>

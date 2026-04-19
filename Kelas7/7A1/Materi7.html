@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 7</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu menambahkan bahan masakan dengan ukuran pecahan, lalu masih perlu menambah atau menguranginya?</li>
+  <li>Jika kamu minum 1/2 gelas susu lalu minum lagi 1/4 gelas, bagaimana cara mengetahui total yang kamu minum?</li>
+  <li>Saat membaca buku beberapa hari, bagaimana cara menghitung total bagian buku yang sudah dibaca?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Menentukan total bahan masakan dari beberapa takaran pecahan.</li>
+  <li>Menghitung total atau sisa waktu kegiatan, misalnya belajar 1/2 jam lalu 3/4 jam.</li>
+  <li>Menghitung sisa makanan atau minuman yang dikonsumsi bertahap.</li>
+  <li>Menentukan total jarak atau bagian pekerjaan yang diselesaikan secara bertahap.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Menyelesaikan operasi penjumlahan dan pengurangan pecahan biasa dan campuran.</li>
+  <li>Menyelesaikan soal kontekstual yang melibatkan penjumlahan dan pengurangan pecahan.</li>
+  <li>Merefleksikan strategi yang digunakan dalam menyelesaikan operasi pecahan.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati situasi sehari-hari yang melibatkan penjumlahan dan pengurangan pecahan.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menentukan cara menggabungkan atau mengurangi pecahan pada konteks yang diberikan.</li>
+  <li>Siswa menuliskan langkah penyelesaian penjumlahan dan pengurangan pecahan secara sederhana.</li>
+  <li>Siswa mengerjakan latihan singkat secara individu untuk menerapkan penjumlahan dan pengurangan pecahan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 <strong>Langkah-langkah Penjumlahan dan Pengurangan Pecahan</strong><br><br>
+
+Samakan penyebut jika berbeda.<br><br>
+
+Jumlahkan atau kurangkan pembilang, penyebut tetap.<br><br>
+
+Sederhanakan hasil jika memungkinkan.<br><br>
+
+Untuk pecahan campuran, ubah ke pecahan biasa terlebih dahulu jika diperlukan.<br><br>
+
+🔹 <strong>Contoh Penjumlahan</strong><br><br>
+
+Hitung: 2/5 + 1/3<br><br>
+
+Langkah:<br>
+KPK penyebut: 15<br><br>
+
+2/5 = 6/15, 1/3 = 5/15<br><br>
+
+6/15 + 5/15 = 11/15<br><br>
+
+🔹 <strong>Contoh Pengurangan</strong><br><br>
+
+Hitung: 1 1/2 - 3/4<br><br>
+
+Langkah:<br>
+Ubah ke pecahan biasa: 1 1/2 = 3/2<br><br>
+
+Samakan penyebut: 3/2 = 6/4<br><br>
+
+6/4 - 3/4 = 3/4
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+<strong>Penjumlahan Pecahan:</strong><br><br>
+
+3/8 + 1/4 = …<br><br>
+
+2 1/3 + 2/3 = …<br><br>
+
+<strong>Pengurangan Pecahan:</strong><br><br>
+
+5/6 - 1/2 = …<br><br>
+
+3 1/4 - 1 3/4 = …<br><br>
+
+<strong>Soal Kontekstual:</strong><br><br>
+
+Seorang ibu membeli 3/4 kg gula dan 2/5 kg tepung. Berapa total berat belanjaannya?<br><br>
+
+Rina membaca 2 1/2 bab buku kemarin dan 1 1/3 bab hari ini. Berapa total bab yang telah dibaca?
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Apa strategi yang kamu gunakan saat menyelesaikan operasi pecahan?</li>
+  <li>Mengapa penting menyamakan penyebut sebelum menjumlahkan atau mengurangkan pecahan?</li>
+  <li>Dalam situasi apa kamu pernah menggunakan penjumlahan atau pengurangan pecahan?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+
+</div>
+</div>
+</body>

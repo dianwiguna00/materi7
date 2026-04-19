@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 9</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button> 
+<div class="content" id="pemantik">
+<ol>
+<li>sudut pada buku atau meja dengan penggaris busur? Apakah hasilnya selalu sama?</li>
+<li>Mengapa kita perlu alat khusus untuk mengetahui besar suatu sudut?</li>
+<li>Apa yang terjadi jika posisi penggaris busur saat mengukur sudut tidak tepat?</li>
+</ol>
+</div>
+
+
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengukur sudut pada buku tulis, meja, atau pintu dengan menggunakan busur derajat.</li>
+<li>Menentukan besar sudut pada gambar bangunan atau denah sederhana.</li>
+<li>Mengamati dan mengukur sudut pada jam dinding di waktu tertentu.</li>
+<li>Mengukur sudut pada rambu lalu lintas atau peralatan sekolah.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+Siswa dapat menggunakan penggaris busur (busur derajat) untuk mengukur dan menentukan besar sudut dengan tepat, serta membandingkan jenis sudut berdasarkan hasil pengukuran.
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati contoh penggunaan penggaris busur saat mengukur sudut pada gambar.</li>
+<li>Siswa berdiskusi dalam kelompok kecil tentang langkah-langkah menggunakan busur derajat dengan benar.</li>
+<li>Siswa mempraktikkan pengukuran sudut pada beberapa gambar atau benda yang disediakan.</li>
+<li>Siswa mengerjakan latihan individu untuk mengukur dan menentukan besar serta jenis sudut.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 Apa itu Penggaris Busur?<br>
+Penggaris busur atau busur derajat adalah alat ukur sudut berbentuk setengah lingkaran yang memiliki skala dari 0° hingga 180°.<br><br>
+🔹 Cara Menggunakan Busur Derajat:<br>
+Tempatkan titik tengah busur tepat di titik sudut.<br>
+Pastikan salah satu sisi sudut sejajar dengan garis 0°.<br>
+Baca angka pada skala tempat sisi lainnya berada.<br>
+Gunakan skala dalam atau luar sesuai posisi sudut.<br><br>
+🔹 Tips:<br>
+Pastikan posisi busur tidak miring.<br>
+Gunakan pensil tipis untuk ketelitian.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+✅ Contoh Soal 1:<br>
+Gambarlah sudut dan ukur besar sudut berikut menggunakan busur derajat:<br>
+Sudut AOB = 60° → Sudut Lancip<br>
+Sudut COD = 90° → Sudut Siku-Siku<br><br>
+✅ Contoh Soal 2: Kontekstual<br>
+Seorang arsitek menggambar sudut pada denah bangunan. Ia menggunakan busur derajat dan mendapatkan sudut sebesar 120°. Jenis sudut tersebut adalah...<br>
+Jawaban: Sudut Tumpul
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Ukurlah sudut-sudut berikut menggunakan busur derajat:<br>
+a. Sudut XYZ<br>
+b. Sudut ABC<br>
+c. Sudut DEF<br>
+(Gambar sudut disediakan oleh guru atau dibuat siswa sendiri)<br><br>
+Tentukan jenis sudut berdasarkan hasil pengukuran:<br>
+Sudut 45° → ?<br>
+Sudut 90° → ?<br>
+Sudut 135° → ?<br><br>
+Gambarlah sudut dengan besar:<br>
+a. 30°<br>
+b. 75°<br>
+c. 150°<br><br>
+Ukur sudut pada benda nyata (misalnya buku, meja, penggaris) dan catat hasilnya.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+<li>Apa tantangan yang kamu hadapi saat menggunakan busur derajat?</li>
+<li>Bagaimana kamu memastikan pengukuran sudut yang akurat?</li>
+<li>Dalam kegiatan apa kamu bisa menggunakan keterampilan mengukur sudut?</li>
+<li>Tuliskan satu pengalamanmu menggunakan busur derajat hari ini dan hasil pengukuran yang kamu lakukan.</li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+</body>

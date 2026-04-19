@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 29</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button><button class="pemantik" onclick="toggle('pemantik')">💡 Pem perhitungan berbeda dengan perkiraan, apa yang sebaiknya kamu lakukan?</li>
+  <li>Mengapa mengevaluasi hasil penting setelah membuat keputusan keuangan?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Mengevaluasi hasil perhitungan harga setelah diskon, pajak, atau promo.</li>
+  <li>Menilai apakah keputusan belanja sudah sesuai dengan anggaran.</li>
+  <li>Membandingkan rencana keuangan dengan hasil yang diperoleh.</li>
+  <li>Memperbaiki strategi pengelolaan uang berdasarkan pengalaman.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Mengevaluasi hasil perhitungan aritmetika sosial dalam konteks kehidupan nyata.</li>
+  <li>Menilai ketepatan langkah dan hasil perhitungan yang dilakukan.</li>
+  <li>Menyimpulkan pembelajaran yang diperoleh dari penerapan aritmetika sosial.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa meninjau kembali contoh dan latihan aritmetika sosial yang telah dikerjakan.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menilai ketepatan solusi dan strategi.</li>
+  <li>Siswa mengidentifikasi kesalahan umum dan cara memperbaikinya.</li>
+  <li>Siswa menyusun rangkuman cara pengambilan keputusan finansial yang bijak.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+Evaluasi dalam aritmetika sosial bertujuan untuk memastikan bahwa:<br><br>
+
+Perhitungan sudah sesuai dengan rumus dan urutan yang benar.<br>
+Hasil perhitungan masuk akal dalam konteks kehidupan nyata.<br>
+Keputusan yang diambil berdasarkan hasil perhitungan bersifat bijak dan realistis.<br><br>
+
+Melalui evaluasi, peserta didik dapat belajar dari pengalaman dan meningkatkan kemampuan mengambil keputusan finansial.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal</strong><br><br>
+
+Seorang siswa membeli sepatu seharga Rp400.000 dengan diskon 20% dan PPN 10%. Setelah dihitung, ia membayar Rp352.000.<br><br>
+
+Tugas:<br>
+Periksa kembali perhitungan tersebut.<br>
+Apakah hasilnya sudah benar?<br><br>
+
+Pembahasan singkat:<br>
+Diskon = 20% × 400.000 = 80.000 → Harga setelah diskon = 320.000<br>
+Pajak = 10% × 320.000 = 32.000<br>
+Harga akhir = 320.000 + 32.000 = 352.000 ✅<br><br>
+
+Kesimpulan: Perhitungan dan keputusan sudah tepat.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Seseorang membeli jaket seharga Rp500.000 dengan diskon 10% dan pajak 11%.<br>
+a. Hitung harga akhir.<br>
+b. Periksa kembali urutan perhitungannya.<br>
+c. Apakah hasilnya masuk akal?<br><br>
+
+Sebuah toko menawarkan promo “Diskon 20% + Cashback Rp40.000” untuk tas seharga Rp600.000.<br>
+a. Hitung harga akhir.<br>
+b. Bandingkan dengan promo lain tanpa cashback (diskon 30%).<br>
+c. Promo mana yang lebih menguntungkan?<br><br>
+
+Tuliskan satu contoh keputusan finansial yang pernah kamu buat dan jelaskan apakah keputusan tersebut sudah tepat berdasarkan perhitungan.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Apa pelajaran terpenting yang kamu peroleh dari mempelajari aritmetika sosial?</li>
+  <li>Bagaimana cara memastikan keputusan keuangan yang kamu ambil sudah tepat?</li>
+  <li>Dalam kehidupan sehari-hari, bagian mana dari materi ini yang paling sering kamu gunakan?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu menilai kembali keputusan belanja yang sudah kamu lakukan?</li>
+
+
+</div>
+</div>
+</body>

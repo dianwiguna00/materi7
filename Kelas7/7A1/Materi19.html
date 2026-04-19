@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 19</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button> yang dimiliki cukup.</li>
+  <li>Memahami arti batas “minimal” atau “maksimal” dalam aturan kegiatan sekolah.</li>
+  <li>Menentukan apakah suatu hasil perhitungan masuk akal dalam situasi menabung atau berbelanja.</li>
+  <li>Menyesuaikan hasil matematika dengan kondisi nyata yang dihadapi.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Menafsirkan makna solusi dari persamaan dan pertidaksamaan dalam konteks masalah sehari-hari.</li>
+  <li>Menghubungkan hasil penyelesaian dengan situasi nyata.</li>
+  <li>Merefleksikan pentingnya memahami solusi dalam pengambilan keputusan.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati beberapa hasil penyelesaian persamaan dan pertidaksamaan yang disajikan dalam konteks cerita.</li>
+  <li>Siswa berdiskusi kelompok untuk menafsirkan makna hasil tersebut dalam kehidupan nyata.</li>
+  <li>Siswa mengaitkan solusi matematika dengan keputusan yang dapat diambil dalam konteks soal.</li>
+  <li>Siswa berlatih menuliskan kesimpulan dari hasil perhitungan sesuai konteks masalah.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 <strong>Solusi Persamaan</strong><br><br>
+
+Solusi dari persamaan adalah nilai pasti yang membuat pernyataan matematika menjadi benar.<br><br>
+
+Persamaan: x + 5 = 12<br>
+Solusi: x = 7<br>
+→ Artinya, jika seseorang menambah 5 ke jumlah tertentu dan hasilnya 12, maka jumlah awalnya adalah 7.<br><br>
+
+🔹 <strong>Solusi Pertidaksamaan</strong><br><br>
+
+Solusi dari pertidaksamaan adalah himpunan nilai yang memenuhi kondisi tertentu.<br><br>
+
+Pertidaksamaan: x &lt; 10<br>
+→ Artinya, nilai x harus kurang dari 10 agar kondisi terpenuhi.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal 1: Persamaan</strong><br><br>
+
+Seorang siswa membeli 3 buku seharga x rupiah per buku. Total belanja Rp75.000.<br><br>
+
+Persamaan: 3x = 75.000<br>
+Solusi: x = 25.000<br>
+Makna: Harga satu buku adalah Rp25.000.<br><br>
+
+<strong>✅ Contoh Soal 2: Pertidaksamaan</strong><br><br>
+
+Seorang siswa memiliki uang x rupiah dan ingin membeli tas seharga Rp150.000.<br><br>
+
+Pertidaksamaan: x ≥ 150.000<br>
+Makna: Ia harus memiliki minimal Rp150.000 agar bisa membeli tas.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+<strong>Persamaan:</strong><br><br>
+
+Seorang ibu membeli 5 kg beras dengan harga x rupiah per kg. Total pembayaran Rp65.000.<br>
+a. Susun persamaan.<br>
+b. Tentukan nilai x.<br>
+c. Tafsirkan hasilnya.<br><br>
+
+Seorang siswa memiliki x kelereng. Ia membeli 12 kelereng lagi dan sekarang memiliki 30 kelereng.<br>
+a. Susun persamaan.<br>
+b. Tentukan nilai x.<br>
+c. Tafsirkan hasilnya.<br><br>
+
+<strong>Pertidaksamaan:</strong><br><br>
+
+Harga satu tiket bioskop adalah Rp25.000. Seorang siswa ingin membeli x tiket dengan uang tidak lebih dari Rp100.000.<br>
+a. Susun pertidaksamaan.<br>
+b. Tentukan himpunan solusi.<br>
+c. Tafsirkan hasilnya.<br><br>
+
+Seorang anak ingin menabung x rupiah setiap minggu agar dalam 4 minggu ia memiliki minimal Rp80.000.<br>
+a. Susun pertidaksamaan.<br>
+b. Tentukan nilai x yang memenuhi.<br>
+c. Tafsirkan hasilnya.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Bagaimana kamu menafsirkan hasil dari persamaan atau pertidaksamaan dalam kehidupan nyata?</li>
+  <li>Mengapa penting memahami makna solusi, bukan hanya hasil hitungan?</li>
+  <li>Dalam situasi apa kamu pernah menggunakan pemahaman ini untuk membuat keputusan?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+<div class="content" id="pemantik">
+<ol>
+  <li>Jika sebuah jawaban matematika sudah kamu dapatkan, apakah jawaban itu selalu masuk akal dalam kehidupan sehari-hari?</li>
+  <li>Pernahkah kamu merasa hasil hitungan benar, tetapi tidak sesuai dengan situasi nyata?</li>
+  <li>Menurutmu, mengapa kita perlu memahami arti dari jawaban, bukan hanya mendapatkannya?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+
+
+</div>
+</div>
+</body>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 10</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Saat melihat bentuk 5x + 3, menurutmu angka dan huruf di dalamnya memiliki peran yang sama atau berbeda?</li>
+  <li>Jika sebuah jumlah belum diketahui nilainya, mengapa kita sering menggunakan huruf untuk menuliskannya?</li>
+  <li>Pernahkah kamu menemukan bentuk matematika dengan huruf saat melihat soal cerita?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Mengidentifikasi huruf sebagai lambang harga barang yang belum diketahui dalam kegiatan belanja.</li>
+  <li>Mengenali angka tetap pada perhitungan uang saku atau pengeluaran harian.</li>
+  <li>Menentukan bagian yang berubah dan yang tetap pada perhitungan jumlah barang.</li>
+  <li>Mengamati pernyataan matematika sederhana yang memuat angka dan huruf.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Mengenali dan membedakan antara variabel, koefisien, dan konstanta dalam bentuk aljabar.</li>
+  <li>Menyusun bentuk aljabar sederhana dan mengidentifikasi komponennya.</li>
+  <li>Merefleksikan peran masing-masing komponen dalam menyusun ekspresi matematika.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati beberapa contoh bentuk aljabar sederhana yang memuat angka dan huruf.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk membedakan peran huruf dan angka pada bentuk yang disajikan.</li>
+  <li>Siswa mengelompokkan bagian bentuk aljabar menjadi variabel, koefisien, dan konstanta.</li>
+  <li>Siswa mengerjakan latihan singkat secara individu untuk mengidentifikasi komponen bentuk aljabar.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 <strong>Bentuk Aljabar</strong><br><br>
+
+Bentuk aljabar adalah ekspresi matematika yang terdiri dari:<br><br>
+
+Variabel: huruf yang mewakili nilai yang belum diketahui (misalnya: x, y)<br>
+Koefisien: angka yang mengalikan variabel<br>
+Konstanta: bilangan tetap yang tidak memiliki variabel<br><br>
+
+Contoh:<br>
+Dalam bentuk aljabar 5x + 3:<br>
+- 5 adalah koefisien<br>
+- x adalah variabel<br>
+- 3 adalah konstanta
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal 1</strong><br><br>
+
+Identifikasi koefisien, variabel, dan konstanta dari bentuk aljabar: 7y + 4<br><br>
+
+Jawaban:<br>
+- Koefisien: 7<br>
+- Variabel: y<br>
+- Konstanta: 4<br><br>
+
+<strong>✅ Contoh Soal 2</strong><br><br>
+
+Dalam bentuk aljabar 3a – 2b + 6, sebutkan semua koefisien, variabel, dan konstanta.<br><br>
+
+Jawaban:<br>
+- Koefisien: 3 (untuk a), –2 (untuk b)<br>
+- Variabel: a, b<br>
+- Konstanta: 6
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Tentukan koefisien, variabel, dan konstanta dari bentuk aljabar berikut:<br><br>
+
+a. 4x + 9<br>
+b. –2m + 5n – 7<br>
+c. k – 3<br><br>
+
+Tuliskan bentuk aljabar dari situasi berikut dan identifikasi komponennya:<br><br>
+
+a. Harga 3 pensil adalah p rupiah per pensil, ditambah 2.000 rupiah untuk ongkir.<br><br>
+
+b. Seorang siswa memiliki x kelereng, lalu membeli 5 kelereng lagi.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Apa perbedaan antara koefisien dan konstanta?</li>
+  <li>Mengapa penting mengenali variabel dalam bentuk aljabar?</li>
+  <li>Bagaimana bentuk aljabar membantu menyederhanakan masalah sehari-hari?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+
+
+</div>
+</div>
+</body>

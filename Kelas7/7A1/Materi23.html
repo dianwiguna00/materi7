@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 23</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button><button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</” di toko?</li>
+  <li>Menurutmu, apakah diskon selalu membuat harga barang menjadi lebih murah?</li>
+  <li>Bagaimana caramu memastikan harga setelah diskon sesuai dengan yang kamu bayarkan?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Menghitung potongan harga saat membeli pakaian atau sepatu yang sedang diskon.</li>
+  <li>Menentukan total pembayaran setelah mendapat diskon di supermarket.</li>
+  <li>Membandingkan harga barang sebelum dan sesudah diskon.</li>
+  <li>Memutuskan pembelian berdasarkan besar diskon yang ditawarkan.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Memahami konsep diskon sebagai potongan harga.</li>
+  <li>Menghitung besar diskon dan harga setelah diskon.</li>
+  <li>Menyelesaikan masalah kontekstual yang melibatkan diskon.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati beberapa contoh label harga dan diskon pada gambar atau brosur.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menafsirkan arti diskon pada setiap contoh.</li>
+  <li>Siswa menentukan harga yang harus dibayar setelah diskon secara sederhana.</li>
+  <li>Siswa mengerjakan latihan kontekstual tentang diskon secara mandiri.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+<strong>Diskon</strong><br>
+Potongan harga yang diberikan kepada pembeli, biasanya dalam bentuk persentase.<br><br>
+
+<strong>Harga Setelah Diskon (HSD)</strong><br>
+Harga yang harus dibayar setelah dikurangi diskon.<br><br>
+
+<strong>Rumus:</strong><br>
+Besar Diskon = (Persentase Diskon / 100) × Harga Awal<br>
+Harga Setelah Diskon = Harga Awal - Diskon
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal</strong><br><br>
+
+Sebuah toko memberikan diskon 20% untuk jaket seharga Rp250.000.<br><br>
+
+Tentukan:<br>
+Besar diskon.<br>
+Harga setelah diskon.<br><br>
+
+Penyelesaian:<br>
+Diskon = (20 / 100) × 250.000 = Rp50.000<br>
+Harga Setelah Diskon = 250.000 - 50.000 = Rp200.000<br><br>
+
+✅ Jadi, harga yang harus dibayar adalah Rp200.000.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Sebuah tas berharga Rp180.000 mendapat diskon 15%.<br>
+a. Hitung besar diskonnya.<br>
+b. Hitung harga setelah diskon.<br><br>
+
+Sebuah sepatu berharga Rp320.000 mendapat diskon 25%.<br>
+a. Hitung besar diskonnya.<br>
+b. Hitung harga setelah diskon.<br><br>
+
+Latihan Kontekstual:<br>
+Toko “Murah Meriah” mengadakan promo diskon 10% untuk semua barang. Jika kamu membeli 3 barang masing-masing seharga Rp100.000, Rp150.000, dan Rp200.000, berapa total yang harus kamu bayar setelah diskon?
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Apa manfaat diskon bagi pembeli dan penjual?</li>
+  <li>Bagaimana cara kita memastikan bahwa diskon benar-benar menguntungkan?</li>
+  <li>Pernahkah kamu membeli barang karena tergiur diskon? Apakah itu keputusan yang bijak?</li>
+</ol>
+</div>
+<div class="content" id="pemantik">
+<ol>
+
+
+</div>
+</div>
+</body>

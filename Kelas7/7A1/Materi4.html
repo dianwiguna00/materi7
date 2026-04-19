@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 4</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu melihat perubahan skor permainan ketika sebuah tim mendapatkan atau kehilangan poin?</li>
+  <li>Jika kamu turun beberapa anak tangga lalu naik kembali, bagaimana cara menghitung perubahan posisimu?</li>
+  <li>Menurutmu, apa yang terjadi jika bilangan positif dan negatif dikalikan atau dibagi?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Menghitung total poin dalam permainan ketika poin dikalikan atau dibagi.</li>
+  <li>Menentukan perubahan ketinggian saat turun atau naik beberapa tingkat secara berulang.</li>
+  <li>Menghitung kerugian atau keuntungan yang terjadi berulang kali dalam satu aktivitas.</li>
+  <li>Menentukan hasil pembagian jumlah barang ke dalam kelompok yang sama banyak.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Memahami aturan perkalian dan pembagian bilangan bulat.</li>
+  <li>Menyelesaikan soal perkalian dan pembagian bilangan bulat dalam berbagai konteks.</li>
+  <li>Merefleksikan pola tanda hasil operasi bilangan bulat.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati contoh situasi sehari-hari yang melibatkan perkalian dan pembagian bilangan bulat.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menentukan aturan tanda pada hasil operasi bilangan bulat.</li>
+  <li>Siswa mencatat pola hasil perkalian dan pembagian bilangan bulat dengan tanda berbeda.</li>
+  <li>Siswa mengerjakan latihan singkat secara individu untuk menerapkan perkalian dan pembagian bilangan bulat.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 <strong>Perkalian Bilangan Bulat</strong><br><br>
+
+(+) × (+) = +<br>
+(–) × (–) = +<br>
+(+) × (–) = –<br>
+(–) × (+) = –<br><br>
+
+Contoh:<br>
+(–3) × (–4) = 12<br>
+5 × (–2) = –10<br><br>
+
+🔹 <strong>Pembagian Bilangan Bulat</strong><br><br>
+
+Aturan tanda sama seperti perkalian.<br><br>
+
+Contoh:<br>
+(–12) ÷ (–3) = 4<br>
+16 ÷ (–4) = –4
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal 1: Perkalian</strong><br><br>
+
+Hitung: (–6) × 5<br><br>
+
+Jawaban: Tanda berbeda → hasilnya negatif → –30<br><br>
+
+<strong>✅ Contoh Soal 2: Pembagian</strong><br><br>
+
+Hitung: (–24) ÷ (–6)<br><br>
+
+Jawaban: Tanda sama → hasilnya positif → 4
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+<strong>Perkalian:</strong><br><br>
+
+(–7) × (–3) = …<br>
+8 × (–2) = …<br>
+(–5) × 6 = …<br><br>
+
+<strong>Pembagian:</strong><br><br>
+
+(–36) ÷ 6 = …<br>
+45 ÷ (–9) = …<br>
+(–20) ÷ (–5) = …<br><br>
+
+<strong>Soal Kontekstual:</strong><br><br>
+
+Seorang pemain kehilangan 4 poin setiap kali melakukan kesalahan. Jika ia melakukan 3 kesalahan, berapa total poin yang hilang?<br><br>
+
+Sebuah tangga memiliki 5 anak tangga, masing-masing turun 2 meter. Berapa ketinggian total yang dicapai?
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Apa pola yang kamu temukan saat mengalikan atau membagi bilangan bulat dengan tanda berbeda?</li>
+  <li>Bagaimana kamu menentukan tanda hasil dari operasi bilangan bulat?</li>
+  <li>Dalam situasi apa kamu pernah menggunakan perkalian atau pembagian bilangan negatif?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+
+</div>
+</div>
+</body>

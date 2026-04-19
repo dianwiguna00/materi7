@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 26</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>ahkah kamu berbelanja dan mendapatkan diskon, lalu masih harus membayar pajak?</li>
+  <li>Bagaimana caramu menentukan apakah suatu transaksi jual beli menguntungkan atau merugikan?</li>
+  <li>Menurutmu, mengapa dalam kehidupan nyata sering digunakan lebih dari satu perhitungan sekaligus?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Menghitung harga akhir barang yang mendapat diskon lalu dikenai pajak.</li>
+  <li>Menentukan keuntungan atau kerugian dalam jual beli setelah mempertimbangkan diskon.</li>
+  <li>Menghitung hasil tabungan atau investasi sederhana untuk memenuhi kebutuhan tertentu.</li>
+  <li>Mengambil keputusan belanja atau menabung berdasarkan hasil perhitungan.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Mengintegrasikan konsep harga beli, harga jual, untung, rugi, diskon, pajak, dan bunga tunggal.</li>
+  <li>Menyelesaikan masalah kontekstual yang melibatkan lebih dari satu konsep aritmetika sosial.</li>
+  <li>Menjelaskan strategi penyelesaian masalah secara logis dan sistematis.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati beberapa masalah aritmetika sosial yang melibatkan dua atau lebih konsep.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menentukan langkah penyelesaian yang tepat.</li>
+  <li>Siswa menyusun urutan perhitungan secara logis dari masalah yang diberikan.</li>
+  <li>Siswa mengerjakan latihan soal terpadu secara mandiri untuk menerapkan strategi yang dipelajari.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+Masalah aritmetika sosial dalam kehidupan nyata sering melibatkan beberapa konsep sekaligus, seperti:<br><br>
+
+Diskon dan pajak dalam pembelian barang.<br>
+Untung dan rugi dalam jual beli.<br>
+Bunga tunggal dalam tabungan atau investasi.<br><br>
+
+Peserta didik perlu:<br><br>
+
+Memahami urutan perhitungan (misalnya: diskon dulu, lalu pajak).<br>
+Menentukan informasi yang relevan dari soal cerita.<br>
+Menggunakan rumus-rumus yang telah dipelajari secara tepat.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal</strong><br><br>
+
+Toko “Serba Murah” menjual sebuah televisi dengan harga Rp4.000.000. Toko memberikan diskon 10%, lalu mengenakan PPN 11% dari harga setelah diskon.<br><br>
+
+Tentukan:<br>
+Harga setelah diskon.<br>
+Besar pajak.<br>
+Harga akhir yang harus dibayar pembeli.<br><br>
+
+Penyelesaian:<br>
+Diskon = (10/100) × 4.000.000 = 400.000<br>
+Harga setelah diskon = 4.000.000 - 400.000 = 3.600.000<br>
+Pajak = (11/100) × 3.600.000 = 396.000<br>
+Harga akhir = 3.600.000 + 396.000 = Rp3.996.000
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Sebuah toko menjual kulkas seharga Rp3.500.000. Toko memberikan diskon 15%, lalu mengenakan PPN 10%.<br>
+a. Hitung harga setelah diskon.<br>
+b. Hitung besar pajak.<br>
+c. Hitung harga akhir yang harus dibayar.<br><br>
+
+Seorang pedagang membeli 10 buah blender seharga Rp250.000 per buah. Ia memberikan diskon 20% kepada pembeli dan tetap mendapat untung Rp20.000 per buah setelah diskon.<br>
+a. Hitung harga jual setelah diskon.<br>
+b. Hitung harga jual sebelum diskon.<br><br>
+
+Kamu menabung Rp2.000.000 di bank dengan bunga tunggal 5% per tahun. Setelah 2 tahun, kamu ingin membeli handphone seharga Rp2.100.000 yang dikenai PPN 10%.<br>
+a. Hitung nilai akhir tabungan.<br>
+b. Hitung harga handphone setelah pajak.<br>
+c. Apakah tabunganmu cukup? Jelaskan.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Bagaimana aritmetika sosial membantu kita membuat keputusan finansial yang lebih bijak?</li>
+  <li>Apa tantangan yang kamu hadapi saat menyelesaikan soal yang melibatkan banyak konsep sekaligus?</li>
+  <li>Bagaimana strategi yang kamu gunakan untuk memahami dan menyelesaikan soal cerita?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+<div class="content" id="pemantik">
+<ol>
+
+
+</div>
+</div>
+</body>

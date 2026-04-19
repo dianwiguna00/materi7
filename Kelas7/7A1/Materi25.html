@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 25</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu menabung di bank atau celengan dan berharap uangnya bertambah?</li>
+  <li>Menurutmu, bagaimana cara bank menambah uang tabungan seseorang?</li>
+  <li>Jika menabung dalam waktu lama, apa pengaruh lamanya waktu terhadap jumlah uang yang diterima?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Menghitung pertambahan uang tabungan setelah disimpan dalam jangka waktu tertentu.</li>
+  <li>Menentukan jumlah uang yang diterima setelah menabung dengan bunga.</li>
+  <li>Membandingkan hasil tabungan dengan lama waktu menabung.</li>
+  <li>Memperkirakan apakah tabungan cukup untuk mencapai tujuan tertentu.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Peserta didik dapat memahami konsep bunga tunggal dalam tabungan atau investasi.</li>
+  <li>Menghitung besar bunga dan nilai akhir tabungan.</li>
+  <li>Menyelesaikan masalah kontekstual yang melibatkan bunga tunggal.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati beberapa contoh situasi menabung dalam kehidupan sehari-hari.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk mengidentifikasi modal awal, waktu, dan hasil akhir.</li>
+  <li>Siswa menuliskan hubungan antara lama menabung dan pertambahan uang secara sederhana.</li>
+  <li>Siswa mengerjakan latihan kontekstual terkait tabungan dan bunga secara mandiri.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+<strong>Bunga Tunggal</strong><br>
+Bunga yang dihitung berdasarkan jumlah pokok (modal awal) setiap periode.<br><br>
+
+<strong>Nilai Akhir (NA)</strong><br>
+Jumlah uang yang diperoleh setelah ditambahkan bunga.<br><br>
+
+<strong>Rumus:</strong><br>
+Bunga = (Persentase Bunga × Modal × Waktu) / 100<br>
+Nilai Akhir = Modal + Bunga<br><br>
+
+Keterangan:<br>
+- Modal: jumlah uang awal yang ditabung/investasikan<br>
+- Waktu: dalam bulan atau tahun (disesuaikan dengan ketentuan soal)
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal</strong><br><br>
+
+Rina menabung Rp2.000.000 di bank dengan bunga tunggal 6% per tahun selama 2 tahun.<br><br>
+
+Tentukan:<br>
+Besar bunga yang diperoleh.<br>
+Nilai akhir tabungan setelah 2 tahun.<br><br>
+
+Penyelesaian:<br>
+Bunga = (6 × 2.000.000 × 2) / 100 = Rp240.000<br>
+Nilai Akhir = 2.000.000 + 240.000 = Rp2.240.000<br><br>
+
+✅ Jadi, tabungan Rina setelah 2 tahun adalah Rp2.240.000.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Doni menabung Rp1.500.000 dengan bunga tunggal 8% per tahun selama 3 tahun.<br>
+a. Hitung besar bunga yang diperoleh.<br>
+b. Hitung nilai akhir tabungan.<br><br>
+
+Sebuah investasi sebesar Rp5.000.000 menghasilkan bunga tunggal 10% per tahun. Berapa nilai akhir investasi setelah 1,5 tahun?<br><br>
+
+Latihan Kontekstual:<br>
+Kamu ingin menabung untuk membeli laptop seharga Rp4.000.000. Jika kamu menabung Rp3.500.000 dengan bunga tunggal 5% per tahun, berapa lama waktu yang dibutuhkan agar tabunganmu cukup?
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Apa keuntungan menabung di bank dengan bunga?</li>
+  <li>Bagaimana bunga tunggal berbeda dari bunga majemuk?</li>
+  <li>Dalam kehidupan nyata, bagaimana kita bisa memanfaatkan konsep bunga untuk perencanaan keuangan?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+
+</div>
+</div>
+</body>

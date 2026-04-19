@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 12</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu mengamati bentuk bangunan atau jalan yang memiliki banyak garis dan sudut?</li>
+<li>Pernahkah kamu melihat denah rumah atau gambar jembatan, hubungan garis dan sudut apa saja yang bisa kamu temukan?</li>
+<li>Mengapa memahami garis dan sudut penting dalam merancang bangunan atau benda sehari-hari?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati garis dan sudut pada denah rumah, gedung, atau lapangan sekolah.</li>
+<li>Memperhatikan bentuk sudut dan garis pada rambu lalu lintas dan marka jalan.</li>
+<li>Mengidentifikasi jenis garis dan sudut pada jendela, pintu, atau rangka atap rumah.</li>
+<li>Mengamati pola garis dan sudut pada lantai keramik atau pagar.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+Siswa dapat mengidentifikasi dan menyelesaikan masalah kontekstual yang melibatkan garis sejajar, garis berpotongan, dan berbagai jenis sudut, serta menerapkan konsep tersebut dalam kehidupan sehari-hari
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati gambar atau ilustrasi situasi nyata yang melibatkan garis dan sudut.</li>
+<li>Siswa berdiskusi dalam kelompok untuk mengidentifikasi jenis garis dan hubungan sudut yang terdapat pada gambar.</li>
+<li>Siswa mempresentasikan hasil diskusi dengan menjelaskan garis dan sudut yang ditemukan.</li>
+<li>Siswa mengerjakan latihan individu untuk menyelesaikan masalah kontekstual yang melibatkan garis dan sudut.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+Pada pertemuan ini, siswa akan mengintegrasikan pemahaman tentang:<br>
+Jenis-jenis garis: sejajar, berpotongan, tegak lurus<br>
+Jenis-jenis sudut: lancip, siku-siku, tumpul, refleks<br>
+Hubungan antar sudut: sehadap, berseberangan dalam, bertolak belakang, berpenyiku<br><br>
+🔍 Kunci Pemahaman:<br>
+Gunakan sifat-sifat sudut untuk menyelesaikan soal tanpa harus mengukur.<br>
+Identifikasi hubungan antar sudut dari gambar atau situasi nyata.<br>
+Terapkan konsep garis dan sudut dalam konteks seperti denah, bangunan, dan desain.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+✅ Contoh Soal 1: Denah Rumah<br>
+Dalam sebuah denah rumah, dua dinding sejajar dipotong oleh garis atap miring. Jika sudut antara dinding dan atap adalah 65°, tentukan:<br>
+Sudut sehadapnya<br>
+Sudut dalam sepihaknya<br><br>
+Penyelesaian:<br>
+Sudut sehadap = 65°<br>
+Sudut dalam sepihak = 180° − 65° = 115°<br><br>
+✅ Contoh Soal 2: Rambu Jalan<br>
+Sebuah rambu lalu lintas berbentuk segitiga sama kaki memiliki dua sudut lancip yang sama besar. Jika sudut tumpulnya adalah 100°, berapa besar masing-masing sudut lancip?<br>
+Penyelesaian:<br>
+Jumlah sudut segitiga = 180°<br>
+Sudut lancip = (180° − 100°) ÷ 2 = 40°<br><br>
+✅ Contoh Soal 3: Bangunan<br>
+Sebuah tiang berdiri tegak lurus terhadap tanah. Jika sinar matahari membentuk sudut 35° dengan tanah, berapa besar sudut antara sinar matahari dan tiang?<br>
+Penyelesaian:<br>
+Sudut antara sinar matahari dan tiang = 90° − 35° = 55°
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Dalam sebuah jembatan, dua kabel sejajar dipotong oleh tiang miring. Jika sudut antara kabel dan tiang adalah 70°, tentukan sudut sehadap dan sudut dalam sepihaknya.<br><br>
+Sebuah papan reklame membentuk sudut 90° dengan tanah. Jika papan dimiringkan sehingga membentuk sudut 75° dengan tanah, berapa sudut antara papan dan garis tegak?<br><br>
+Dalam sebuah desain lantai, dua garis sejajar dipotong oleh garis diagonal. Jika salah satu sudut yang terbentuk adalah 110°, tentukan semua sudut lainnya.<br><br>
+Gambarlah situasi nyata yang melibatkan garis sejajar dan transversal, lalu tandai dan beri nama semua sudut yang terbentuk.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana kamu mengenali hubungan antar sudut dalam situasi nyata?</li>
+<li>Apa manfaat memahami garis dan sudut dalam kehidupan sehari-hari?</li>
+<li>Bagian mana dari materi garis dan sudut yang paling kamu kuasai? Mana yang masih perlu latihan?</li>
+<li>Tuliskan satu contoh dari lingkunganmu yang melibatkan garis dan sudut, lalu jelaskan jenis garis dan sudut yang ada di dalamnya.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>

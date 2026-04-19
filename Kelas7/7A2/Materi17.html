@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 17</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu memperhatikan luas permukaan kolam, taman bundar, atau meja bulat?</li>
+<li>Menurutmu, apakah lingkaran yang lebih besar selalu memiliki luas yang lebih besar?</li>
+<li>Bagaimana cara memperkirakan luas area berbentuk lingkaran di sekitarmu?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menghitung luas permukaan kolam berbentuk lingkaran.</li>
+<li>Memperkirakan luas taman atau lapangan kecil yang berbentuk bundar.</li>
+<li>Menentukan luas alas panci, piring, atau meja makan berbentuk lingkaran.</li>
+<li>Menghitung luas area penutup seperti taplak meja bundar.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat memahami dan menggunakan rumus luas lingkaran untuk menyelesaikan berbagai soal, baik dalam bentuk numerik maupun kontekstual.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati berbagai benda berbentuk lingkaran dan memperkirakan ukurannya.</li>
+<li>Siswa berdiskusi dalam kelompok untuk menentukan data yang diperlukan dari benda yang diamati.</li>
+<li>Siswa menyajikan hasil diskusi tentang perkiraan luas benda berbentuk lingkaran.</li>
+<li>Siswa mengerjakan latihan individu menghitung luas lingkaran berdasarkan situasi kontekstual yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Luas Lingkaran: Luas lingkaran adalah daerah yang dibatasi oleh keliling lingkaran.<br>
+Rumus Luas Lingkaran: L = π × r², di mana π ≈ 3,14 atau 22/7 dan r = jari-jari lingkaran.<br><br>
+Catatan:<br>
+Jika diketahui diameter (d), maka r = d ÷ 2<br>
+Satuan luas selalu dalam satuan persegi (cm², m², dll)
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Hitung luas lingkaran dengan jari-jari 7 cm. Gunakan π = 22/7.<br>
+Penyelesaian:<br>
+L = π × r² = 22/7 × 7² = 22/7 × 49 = 154 cm²<br><br>
+
+<strong>Contoh Soal 2:</strong><br>
+Sebuah lingkaran memiliki diameter 20 cm. Hitung luasnya dengan π ≈ 3,14.<br>
+Penyelesaian:<br>
+r = 20 ÷ 2 = 10 cm<br>
+L = 3,14 × 10² = 3,14 × 100 = 314 cm²
+
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Hitung luas lingkaran dengan jari-jari:<br>a. 14 cm (gunakan π = 22/7)<br>b. 10 cm (gunakan π ≈ 3,14)</li>
+<li>Hitung luas lingkaran dengan diameter:<br>a. 28 cm<br>b. 16 cm</li>
+<li>Sebuah kolam berbentuk lingkaran memiliki jari-jari 3,5 m. Hitung luas kolam tersebut.</li>
+<li>Sebuah tutup panci berbentuk lingkaran memiliki diameter 24 cm. Hitung luas permukaannya.</li>
+<li>Gambarlah lingkaran dengan jari-jari 6 cm, lalu hitung luasnya dan tuliskan rumus yang digunakan.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa perbedaan antara rumus keliling dan luas lingkaran?</li>
+<li>Dalam kehidupan sehari-hari, kapan kamu perlu menghitung luas lingkaran?</li>
+<li>Bagian mana dari materi hari ini yang paling kamu kuasai dan mana yang masih membingungkan?</li>
+<li>Tuliskan satu benda berbentuk lingkaran yang kamu temui hari ini dan hitung perkiraan luasnya.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>

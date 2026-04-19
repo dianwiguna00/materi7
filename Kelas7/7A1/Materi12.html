@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1500px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;     /* ✅ jarak 0 */
+    color:white;
+    text-align:left;
+    cursor:pointer;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:20px;
+    line-height:0.6;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .content{font-size:22px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const el=document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 12</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu membeli beberapa barang yang sama di toko, lalu menghitung total harganya sekaligus?</li>
+  <li>Jika satu jenis barang dibeli lebih dari satu kali, bagaimana cara menuliskan perhitungannya agar lebih singkat?</li>
+  <li>Menurutmu, mengapa satu bilangan bisa dikalikan ke beberapa bagian sekaligus?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Menghitung total harga beberapa barang sejenis yang dibeli sekaligus.</li>
+  <li>Menentukan total uang saku yang digunakan selama beberapa hari dengan jumlah yang sama.</li>
+  <li>Menghitung jumlah poin atau benda yang didapat secara berulang dengan nilai yang sama.</li>
+  <li>Menuliskan perhitungan biaya transportasi yang dibayar dengan tarif tetap.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Melakukan operasi perkalian bentuk aljabar dengan bilangan.</li>
+  <li>Menyederhanakan bentuk aljabar hasil perkalian.</li>
+  <li>Merefleksikan pemahaman tentang distribusi bilangan terhadap bentuk aljabar.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati contoh situasi sehari-hari yang melibatkan pengulangan jumlah yang sama.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menuliskan perhitungan tersebut dalam bentuk sederhana.</li>
+  <li>Siswa menuliskan hasil perhitungan dengan cara yang lebih ringkas.</li>
+  <li>Siswa mengerjakan latihan singkat secara individu untuk menerapkan perkalian bilangan pada bentuk aljabar.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 <strong>Perkalian Bilangan dengan Bentuk Aljabar</strong><br><br>
+
+Perkalian bilangan dengan bentuk aljabar berarti mengalikan setiap suku dalam bentuk aljabar dengan bilangan tersebut.<br><br>
+
+Contoh:<br>
+3 × (2x + 4) = 6x + 12<br>
+→ Kalikan 3 ke setiap suku:<br>
+3 × 2x = 6x<br>
+3 × 4 = 12<br><br>
+
+🔹 <strong>Sifat Distributif</strong><br><br>
+
+Sifat ini menyatakan bahwa:<br>
+a(b + c) = ab + ac
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal 1</strong><br><br>
+
+Hitung: 4(x + 5)<br><br>
+
+Jawaban: 4x + 20<br><br>
+
+<strong>✅ Contoh Soal 2</strong><br><br>
+
+Hitung: –2(3a – 7)<br><br>
+
+Jawaban: –6a + 14 → Karena –2 × –7 = +14
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Hitung hasil dari:<br><br>
+
+a. 5(2x + 3)<br>
+b. –3(x – 4)<br>
+c. 2(3a + 2b)<br><br>
+
+Sederhanakan bentuk aljabar berikut:<br><br>
+
+a. –4(2m – 5n)<br>
+b. 6(x + y – 2)<br><br>
+
+Soal Kontekstual:<br><br>
+
+a. Seorang pedagang menjual x buah apel setiap hari. Jika ia berjualan selama 7 hari, tuliskan bentuk aljabar jumlah apel yang dijual.<br><br>
+
+b. Harga satu paket makanan adalah p rupiah. Jika membeli 3 paket dan membayar ongkir sebesar 10.000 rupiah, tuliskan bentuk aljabar total biaya.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Bagaimana kamu menggunakan sifat distributif dalam menyelesaikan soal bentuk aljabar?</li>
+  <li>Apa tantangan yang kamu hadapi saat mengalikan bilangan dengan bentuk aljabar?</li>
+  <li>Dalam situasi apa kamu bisa menggunakan operasi ini dalam kehidupan nyata?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+
+</div>
+</div>
+</body>
