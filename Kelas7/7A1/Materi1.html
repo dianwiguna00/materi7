@@ -3,18 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pertemuan 1 – Konsep Segitiga Siku-Siku dan Komponennya</title>
+<title>Pertemuan 1</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
 body{
     font-family:'Segoe UI',sans-serif;
     margin:0;
     background:linear-gradient(135deg,#11998e,#38ef7d);
 }
 .container{
-    max-width:1500px;
+    max-width:1200px;
     margin:auto;
-    padding:10px;
+    padding:15px;
 }
 h1{
     text-align:center;
@@ -32,13 +35,18 @@ h1{
 button{
     width:100%;
     padding:14px;
-    font-size:20px;
+    font-size:clamp(16px, 2.5vw, 20px);
     border:none;
     border-radius:15px;
-    margin-bottom:2px;     /* ✅ jarak 0 */
+    margin-bottom:2px;
     color:white;
     text-align:left;
     cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
 }
 
 .tujuan{background:#16a085;}
@@ -53,8 +61,8 @@ button{
 /* ISI */
 .content{
     display:none;
-    font-size:20px;
-    line-height:1.2;
+    font-size:clamp(16px, 2.5vw, 20px);
+    line-height:1.0;
     color:#2c3e50;
 
     padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
@@ -68,14 +76,22 @@ button{
     white-space:pre-line;
 }
 
-@media(max-width:600px){
-    .content{font-size:22px;}
+@media (max-width:900px){
+    .content{font-size:18px;}
 }
 </style>
 
 <script>
 function toggle(id){
-    const el=document.getElementById(id);
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
     el.style.display = el.style.display==="block" ? "none" : "block";
 }
 </script>
@@ -91,6 +107,7 @@ function toggle(id){
 <button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
 <div class="content" id="pemantik">
 <ol>
+<li>Pernahkah kamu membandingkan jumlah teman laki-laki dan perempuan di kelasmu? Bagaimana caramu menyebutkannya?</li>
   <li>Pernahkah kamu melihat suhu di daerah pegunungan bernilai di bawah nol?</li>
   <li>Saat memasak atau berbelanja, kapan kamu menggunakan pecahan seperti ½ atau ¾?</li>
   <li>Mengapa menurutmu kita perlu memahami bilangan dalam kehidupan sehari-hari?</li>
@@ -153,11 +170,13 @@ L : Total = 12 : (12+18) = 12 : 30 = 2 : 5
 
 <button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
 <div class="content" id="latihan">
-Dalam sebuah kotak terdapat 8 kelereng merah dan 12 kelereng biru. Tentukan perbandingan:<br>
-Merah terhadap biru<br>
-Biru terhadap seluruh kelereng<br><br>
-Sebuah resep kue membutuhkan 2 gelas gula dan 5 gelas tepung. Berapa perbandingan gula terhadap tepung?<br><br>
-Di perpustakaan terdapat 45 buku fiksi dan 30 buku nonfiksi. Tentukan perbandingan buku fiksi terhadap seluruh buku.
+<ol>
+<li>Dalam sebuah kotak terdapat 8 kelereng merah dan 12 kelereng biru. Tentukan perbandingan:<br>
+a. Merah terhadap biru<br>
+b. Biru terhadap seluruh kelereng</li>
+<li>Sebuah resep kue membutuhkan 2 gelas gula dan 5 gelas tepung. Berapa perbandingan gula terhadap tepung?</li>
+<li>Di perpustakaan terdapat 45 buku fiksi dan 30 buku nonfiksi. Tentukan perbandingan buku fiksi terhadap seluruh buku.</li>
+</ol>
 </div>
 
 <button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
@@ -169,11 +188,8 @@ Di perpustakaan terdapat 45 buku fiksi dan 30 buku nonfiksi. Tentukan perbanding
 <li>Tuliskan satu hal yang kamu pahami dengan baik dan satu hal yang ingin kamu tanyakan lebih lanjut.</li>
 </ol>
 </div>
-<div class="content" id="pemantik">
-<ol>
-<li>Pernahkah kamu membandingkan jumlah teman laki-laki dan perempuan di kelasmu? Bagaimana caramu menyebutkannya?</li>
-
 
 </div>
 </div>
 </body>
+</html>
