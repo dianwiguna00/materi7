@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 2</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu membandingkan nilai suhu antara pagi dan malam hari?</li>
+  <li>Jika dua tim memiliki skor berbeda, bagaimana cara menentukan skor mana yang lebih besar?</li>
+  <li>Saat melihat lantai gedung (basement hingga lantai atas), bagaimana urutannya menurutmu?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Membandingkan suhu beberapa kota yang memiliki nilai di bawah dan di atas nol derajat.</li>
+  <li>Mengurutkan skor permainan dari yang terendah hingga tertinggi.</li>
+  <li>Menentukan urutan ketinggian tempat, seperti lantai parkir bawah tanah hingga lantai atas gedung.</li>
+  <li>Membaca posisi bilangan pada garis bilangan, seperti jarak suatu tempat dari titik nol.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Mengurutkan bilangan bulat dari yang terkecil ke terbesar dan sebaliknya.</li>
+  <li>Membandingkan dua bilangan bulat menggunakan simbol &lt;, &gt;, dan =.</li>
+  <li>Menggunakan garis bilangan untuk memvisualisasikan urutan dan perbandingan bilangan bulat.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati ilustrasi garis bilangan dan posisi beberapa bilangan bulat.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk mengurutkan dan membandingkan bilangan pada situasi yang diberikan.</li>
+  <li>Siswa menuliskan hasil perbandingan bilangan menggunakan simbol yang sesuai.</li>
+  <li>Siswa mengerjakan latihan singkat secara mandiri berdasarkan garis bilangan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 <strong>Mengurutkan Bilangan Bulat</strong>
+
+Bilangan bulat dapat diurutkan berdasarkan nilainya:
+
+Dari kecil ke besar: –5, –3, 0, 2, 4
+Dari besar ke kecil: 4, 2, 0, –3, –5
+
+🔹 <strong>Membandingkan Bilangan Bulat</strong>
+
+Gunakan simbol:
+
+&lt; (lebih kecil dari)
+&gt; (lebih besar dari)
+= (sama dengan)
+
+Contoh:
+
+–3 &lt; 2 → karena –3 berada di kiri 2 pada garis bilangan.
+0 &gt; –5 → karena 0 lebih besar dari –5.
+
+🔹 <strong>Garis Bilangan</strong><br><br>
+
+← –5 –4 –3 –2 –1  0  1  2  3  4  5 →
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal 1: Mengurutkan Bilangan</strong>
+
+Urutkan bilangan berikut dari yang terkecil ke terbesar: –2, 4, 0, –5, 3
+
+Jawaban: –5, –2, 0, 3, 4
+
+<strong>✅ Contoh Soal 2: Membandingkan Bilangan</strong>
+
+Bandingkan bilangan –4 dan –1
+
+Jawaban: –4 &lt; –1 → karena –4 lebih kecil dari –1
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+<strong>Mengurutkan Bilangan:</strong>
+
+Urutkan bilangan berikut dari yang terbesar ke terkecil: 2, –3, 0, –1, 5
+
+Urutkan bilangan berikut dari yang terkecil ke terbesar: –6, –2, –8, 0, 3
+
+<strong>Membandingkan Bilangan:</strong>
+
+Gunakan simbol &lt;, &gt;, atau = untuk membandingkan:
+
+–7 ___ –3
+0 ___ –1
+5 ___ 5
+
+<strong>Garis Bilangan:</strong>
+
+Tandai bilangan –4, –1, 0, dan 3 pada garis bilangan.
+
+Bilangan manakah yang paling dekat ke nol: –2 atau –5?
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Bagaimana garis bilangan membantumu memahami urutan bilangan?</li>
+  <li>Pernahkah kamu menggunakan konsep perbandingan bilangan dalam kehidupan nyata?</li>
+  <li>Apa tantangan yang kamu hadapi saat mengurutkan bilangan negatif?</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

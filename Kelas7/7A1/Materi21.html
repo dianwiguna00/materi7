@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 21</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button> Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Memahami pengertian harga beli, harga jual, untung, dan rugi.</li>
+  <li>Mengidentifikasi hubungan antar konsep tersebut dalam konteks jual beli.</li>
+  <li>Menyelesaikan soal kontekstual yang melibatkan untung dan rugi.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati beberapa ilustrasi transaksi jual beli sederhana.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menentukan untung atau rugi dari setiap situasi.</li>
+  <li>Siswa menuliskan hasil pengamatan dalam bentuk pernyataan singkat.</li>
+  <li>Siswa mengerjakan latihan soal kontekstual secara mandiri berdasarkan situasi yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep" style="white-space: pre-line;">
+<strong>Harga Beli (HB)</strong>
+Harga saat barang dibeli oleh penjual.
+
+<strong>Harga Jual (HJ)</strong>
+Harga saat barang dijual kepada pembeli.
+
+<strong>Untung (U)</strong>
+Selisih positif antara harga jual dan harga beli.
+
+<strong>Rugi (R)</strong>
+Selisih negatif antara harga jual dan harga beli.
+
+<strong>Rumus:</strong>
+Jika Untung: Untung = Harga Jual - Harga Beli
+Jika Rugi: Rugi = Harga Beli - Harga Jual
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh" style="white-space: pre-line;">
+<strong>✅ Contoh Soal</strong>
+
+Seorang pedagang membeli 1 lusin buku tulis seharga Rp48.000. Ia menjual seluruhnya seharga Rp60.000.
+
+Tentukan:
+Harga beli per buku.
+Harga jual per buku.
+Keuntungan per buku.
+
+Penyelesaian:
+Harga beli per buku = Rp48.000 ÷ 12 = Rp4.000
+Harga jual per buku = Rp60.000 ÷ 12 = Rp5.000
+Untung per buku = Rp5.000 - Rp4.000 = Rp1.000
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan" style="white-space: pre-line;">
+<strong>Latihan 1:</strong>
+Siti membeli 10 kotak pensil seharga Rp150.000. Ia menjualnya seharga Rp12.000 per kotak.
+a. Berapa total harga jualnya?
+b. Apakah Siti untung atau rugi? Berapa besar untung/ruginya?
+
+<strong>Latihan 2:</strong>
+Pak Budi membeli sepeda bekas seharga Rp1.200.000 dan menjualnya kembali seharga Rp1.050.000.
+a. Apakah Pak Budi mengalami untung atau rugi?
+b. Hitung besar untung/ruginya.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi" style="white-space: pre-line;">
+Apa perbedaan antara harga beli dan harga jual?
+Dalam kehidupan sehari-hari, kapan kita bisa mengalami untung atau rugi?
+Bagaimana strategi agar kita bisa mendapatkan keuntungan dalam jual beli?
+</div>
+
+<div class="content" id="pemantik" style="white-space: pre-line;">
+Pernahkah kamu membeli barang lalu menjualnya kembali?
+Bagaimana perasaanmu jika barang yang kamu jual ternyata menghasilkan keuntungan atau kerugian?
+Menurutmu, apa yang membuat seseorang bisa untung atau rugi saat berjualan?
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Membandingkan harga saat membeli barang dengan harga saat menjualnya kembali.</li>
+  <li>Menentukan apakah penjualan suatu barang menghasilkan untung atau rugi.</li>
+  <li>Menghitung selisih harga dalam transaksi jual beli sehari-hari.</li>
+  <li>Mengamati contoh jual beli di kantin, pasar, atau toko sekitar.</li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+</body>
+</html>

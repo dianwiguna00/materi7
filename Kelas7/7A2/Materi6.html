@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 6</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu memperhatikan kecepatan kendaraan saat di jalan? Apa bedanya kendaraan yang cepat dan lambat? </li>
+<li>Saat mengisi air ke ember, apakah waktu yang dibutuhkan selalu sama jika jumlah airnya berbeda? </li>
+<li>Mengapa jarak dan waktu sering digunakan untuk membandingkan kecepatan suatu perjalanan? </li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati hubungan antara jarak tempuh dan waktu perjalanan saat bersepeda atau naik motor.</li>
+<li>Membandingkan banyaknya air yang keluar dari keran dengan lamanya waktu mengalir.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+Siswa dapat memahami dan menyelesaikan masalah kontekstual yang melibatkan laju perubahan sebagai bentuk perbandingan senilai, serta menginterpretasikan maknanya dalam kehidupan sehari-hari.
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati beberapa contoh situasi sehari-hari yang melibatkan perbandingan dengan waktu.</li>
+<li>Siswa berdiskusi dalam kelompok untuk mengidentifikasi besaran yang dibandingkan dalam setiap situasi.</li>
+<li>Siswa menyajikan hasil diskusi kelompok tentang contoh laju perubahan yang ditemukan.</li>
+<li>Siswa mengerjakan latihan individu berdasarkan masalah kontekstual yang berkaitan dengan laju perubahan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 Apa itu Laju Perubahan?<br>
+Laju perubahan adalah perbandingan antara perubahan suatu besaran terhadap waktu atau besaran lainnya. Contoh umum:<br>
+Kecepatan = jarak / waktu<br>
+Debit air = volume / waktu<br>
+Produktivitas = hasil / waktu<br><br>
+🔹 Ciri-Ciri Laju Perubahan:<br>
+Termasuk perbandingan senilai<br>
+Satuan biasanya berupa “per” (misalnya: km/jam, liter/menit, buku/hari)
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+✅ Contoh Soal 1: Kecepatan<br>
+Sebuah sepeda menempuh jarak 60 km dalam waktu 3 jam. Berapa kecepatan sepeda tersebut?<br>
+Penyelesaian:<br>
+Kecepatan = Jarak / Waktu = 60 / 3 = 20 km/jam<br><br>
+✅ Contoh Soal 2: Debit Air<br>
+Sebuah keran mengalirkan air sebanyak 24 liter dalam 6 menit. Berapa debit air dari keran tersebut?<br>
+Penyelesaian:<br>
+Debit = 24 / 6 = 4 liter/menit
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah mobil menempuh jarak 180 km dalam waktu 3 jam. Hitung kecepatan mobil tersebut.</li>
+<li>Sebuah mesin menghasilkan 120 botol dalam 4 jam. Berapa produktivitas mesin per jam?</li>
+<li>Sebuah pompa mengalirkan 150 liter air dalam 10 menit. Hitung debit air dari pompa tersebut.</li>
+<li>Seorang siswa membaca 45 halaman buku dalam 3 hari. Berapa rata-rata halaman yang dibaca per hari?</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+<li>Dalam kehidupan sehari-hari, di mana kamu sering menemukan konsep laju perubahan?</li>
+<li>Apa manfaat mengetahui kecepatan, debit, atau produktivitas dalam suatu aktivitas?</li>
+<li>Bagian mana dari materi hari ini yang paling membantu kamu memahami perbandingan senilai?</li>
+<li>Tuliskan satu contoh laju perubahan yang kamu alami atau amati, dan bagaimana kamu menghitungnya.</li>
+</ol>
+</div>
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu memperhatikan kecepatan kendaraan saat di jalan? Apa bedanya kendaraan yang cepat dan lambat?</li>
+<li>Saat mengisi air ke ember, apakah waktu yang dibutuhkan selalu sama jika jumlah airnya berbeda?</li>
+<li>Mengapa jarak dan waktu sering digunakan untuk membandingkan kecepatan suatu perjalanan?</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

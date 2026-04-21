@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 1</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu membandingkan jumlah teman laki-laki dan perempuan di kelasmu? Bagaimana caramu menyebutkannya?</li>
+  <li>Pernahkah kamu melihat suhu di daerah pegunungan bernilai di bawah nol?</li>
+  <li>Saat memasak atau berbelanja, kapan kamu menggunakan pecahan seperti ½ atau ¾?</li>
+  <li>Mengapa menurutmu kita perlu memahami bilangan dalam kehidupan sehari-hari?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Membaca suhu harian, misalnya suhu pagi –2°C dan siang 5°C.</li>
+  <li>Menghitung bagian bahan dalam resep, seperti ½ gelas gula atau ¾ sendok garam.</li>
+  <li>Menentukan diskon atau persentase saat berbelanja.</li>
+  <li>Memahami ketinggian dan kedalaman, seperti di atas dan di bawah permukaan laut.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+Siswa dapat menjelaskan konsep rasio dan perbandingan serta mengidentifikasi penggunaannya dalam kehidupan sehari-hari
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati berbagai situasi sehari-hari yang melibatkan perbandingan melalui gambar atau cerita singkat.</li>
+<li>Siswa berdiskusi dalam kelompok kecil untuk menuliskan bentuk perbandingan dari situasi yang diamati.</li>
+<li>Siswa mempresentasikan hasil diskusi kelompok dan menanggapi pendapat kelompok lain.</li>
+<li>Siswa mengerjakan latihan sederhana secara individu untuk menuliskan perbandingan dalam berbagai bentuk.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 Apa itu Perbandingan?
+Perbandingan adalah cara untuk menyatakan hubungan antara dua atau lebih nilai atau besaran. Perbandingan sering digunakan untuk:
+Menyatakan rasio (perbandingan bagian terhadap bagian atau bagian terhadap keseluruhan)
+Menentukan efisiensi, proporsi, atau skala<br><br>
+🔹 Bentuk Umum Perbandingan:
+a : b (dibaca “a banding b”)
+a/b atau a ÷ b
+a ke b
+
+🔹 Contoh dalam Kehidupan Sehari-hari:
+Perbandingan jumlah siswa laki-laki dan perempuan di kelas.
+Perbandingan bahan dalam resep masakan.
+Perbandingan jarak pada peta dengan jarak sebenarnya.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+✅ Contoh Soal 1:<br>
+Di kelas 7A terdapat 12 siswa laki-laki dan 18 siswa perempuan. Tentukan perbandingan:
+Laki-laki terhadap perempuan
+Perempuan terhadap laki-laki
+Laki-laki terhadap seluruh siswa
+
+Penyelesaian:
+L : P = 12 : 18 = 2 : 3
+P : L = 18 : 12 = 3 : 2
+L : Total = 12 : (12+18) = 12 : 30 = 2 : 5
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+<ol>
+<li>Dalam sebuah kotak terdapat 8 kelereng merah dan 12 kelereng biru. Tentukan perbandingan:
+a. Merah terhadap biru
+b. Biru terhadap seluruh kelereng</li>
+<li>Sebuah resep kue membutuhkan 2 gelas gula dan 5 gelas tepung. Berapa perbandingan gula terhadap tepung?</li>
+<li>Di perpustakaan terdapat 45 buku fiksi dan 30 buku nonfiksi. Tentukan perbandingan buku fiksi terhadap seluruh buku.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+<li>Di mana saja kamu pernah menggunakan perbandingan dalam kehidupan sehari-hari?</li>
+<li>Mengapa penting memahami konsep perbandingan?</li>
+<li>Apa yang masih membingungkan dari materi hari ini?</li>
+<li>Tuliskan satu hal yang kamu pahami dengan baik dan satu hal yang ingin kamu tanyakan lebih lanjut.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

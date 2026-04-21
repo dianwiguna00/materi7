@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 28</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu membuat keputusan membeli barang setelah melihat iklan atau brosur?</li>
+  <li>Jika sebuah iklan menawarkan diskon besar, apakah itu selalu berarti lebih murah?</li>
+  <li>Menurutmu, mengapa kita perlu membaca informasi iklan dengan cermat?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengevaluasi informasi harga dan diskon pada iklan atau brosur.</li>
+  <li>Menghitung harga akhir berdasarkan informasi diskon atau promo.</li>
+  <li>Membandingkan beberapa promo untuk menentukan pilihan terbaik.</li>
+  <li>Menghindari kesalahan keputusan akibat salah menafsirkan iklan.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Mengidentifikasi informasi penting dari iklan atau brosur yang berkaitan dengan harga dan diskon.</li>
+  <li>Menafsirkan dan menghitung harga akhir berdasarkan informasi dalam iklan.</li>
+  <li>Menilai manfaat dan strategi dari promo yang ditawarkan.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati contoh iklan atau brosur yang memuat informasi harga dan diskon.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk mengidentifikasi informasi penting pada iklan.</li>
+  <li>Siswa menghitung harga akhir dari barang berdasarkan informasi yang diberikan.</li>
+  <li>Siswa mengerjakan latihan evaluasi terkait iklan secara mandiri.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep" style="white-space: pre-line;">
+<strong>Elemen Iklan atau Brosur</strong>
+
+Harga Awal: harga sebelum diskon atau promo.
+Diskon (%): potongan harga dalam bentuk persentase.
+Harga Setelah Diskon: harga yang harus dibayar setelah diskon diterapkan.
+Promo Tambahan: seperti cashback, beli 2 gratis 1, atau potongan langsung.
+
+Dalam menafsirkan iklan, penting untuk:
+
+Membaca detail syarat dan ketentuan.
+Memahami jenis diskon atau promo yang diberikan.
+Menghitung harga akhir secara cermat.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh" style="white-space: pre-line;">
+<strong>✅ Contoh Soal</strong>
+
+Promo Spesial!
+Sepatu Sneakers: Rp500.000
+Diskon 20% + Cashback Rp25.000
+Berlaku hingga 31 Juli
+
+Tentukan:
+Harga setelah diskon.
+Harga akhir setelah cashback.
+
+Penyelesaian:
+Diskon = (20/100) × 500.000 = 100.000
+Harga setelah diskon = 500.000 - 100.000 = 400.000
+Harga akhir setelah cashback = 400.000 - 25.000 = 375.000
+
+✅ Jadi, pembeli hanya membayar Rp375.000.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan" style="white-space: pre-line;">
+Sebuah jaket berharga Rp600.000 mendapat diskon 30%.
+a. Hitung harga setelah diskon.
+
+Sebuah tas berharga Rp450.000 mendapat diskon 20% dan cashback Rp30.000.
+a. Hitung harga setelah diskon.
+b. Hitung harga akhir yang harus dibayar.
+
+Soal Kontekstual:
+Sebuah brosur menawarkan dua promo berikut:
+Promo A: Diskon 25% dari Rp800.000
+Promo B: Diskon 15% + cashback Rp50.000 dari Rp800.000
+Promo mana yang lebih menguntungkan? Jelaskan alasanmu.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Apa manfaat memahami informasi iklan sebelum membeli barang?</li>
+  <li>Bagaimana cara menghindari kesalahan saat menafsirkan diskon atau promo?</li>
+  <li>Menurutmu, apakah semua iklan selalu menguntungkan pembeli? Mengapa?</li>
+</ol>
+
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+
+
+
+</div>
+</div>
+</body>
+</html>

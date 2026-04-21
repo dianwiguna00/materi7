@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 3</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat daftar harga barang yang semakin banyak dibeli, harganya juga ikut bertambah?</li>
+<li>Jika kamu menempuh jarak yang sama setiap jam saat berkendara, apa yang terjadi pada total jarak seiring bertambahnya waktu? </li>
+<li>Mengapa grafik harga dan jumlah barang sering digambar berupa garis lurus?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+<li>Menyusun tabel harga total berdasarkan banyaknya barang yang dibeli.</li>
+<li>Mencatat jarak tempuh kendaraan terhadap waktu perjalanan.</li>
+<li>Membandingkan jumlah liter minyak goreng dengan total harga.</li>
+<li>Mengamati hubungan jumlah jam belajar dengan jumlah halaman yang dibaca.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+Siswa dapat menyelesaikan masalah perbandingan senilai dengan bantuan tabel dan grafik serta menginterpretasikan hasilnya.
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati data sederhana dari situasi sehari-hari yang disajikan dalam bentuk tabel.</li>
+<li>Siswa berdiskusi dalam kelompok untuk menggambar grafik dari data yang tersedia.</li>
+<li>Siswa menjelaskan keterkaitan antara tabel dan grafik yang dibuat bersama kelompoknya.</li>
+<li>Siswa mengerjakan latihan individu dengan menyusun tabel atau grafik dari masalah kontekstual yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 Perbandingan Senilai<br>
+Perbandingan senilai menunjukkan hubungan proporsional langsung antara dua besaran. Jika satu besaran meningkat, maka besaran lainnya juga meningkat dengan rasio yang tetap.<br><br>
+🔹 Representasi dalam Tabel<br>
+Tabel digunakan untuk menunjukkan hubungan antara dua besaran secara sistematis.<br>
+Jumlah Barang<br>
+Harga Total (Rp)<br>
+1 → 10.000<br>
+2 → 20.000<br>
+3 → 30.000<br>
+4 → 40.000<br><br>
+🔹 Representasi dalam Grafik<br>
+Grafik garis lurus yang melalui titik asal (0,0) menunjukkan hubungan senilai.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+✅ Contoh Soal 1: Tabel<br>
+Seorang penjual menjual jeruk dengan harga Rp5.000 per kg. Buatlah tabel untuk menunjukkan harga total untuk 1–5 kg jeruk.<br>
+1 kg → 5.000<br>
+2 kg → 10.000<br>
+3 kg → 15.000<br>
+4 kg → 20.000<br>
+5 kg → 25.000<br><br>
+✅ Contoh Soal 2: Grafik<br>
+Gunakan data dari tabel di atas untuk menggambar grafik hubungan antara berat jeruk dan harga total.<br>
+(Grafik dapat digambar di buku siswa atau menggunakan aplikasi digital)
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Harga 1 liter minyak goreng adalah Rp14.000. Buatlah tabel harga untuk 1–6 liter.<br><br>
+Sebuah mobil menempuh 60 km dalam 1 jam. Buatlah tabel dan grafik untuk jarak tempuh selama 1–5 jam.<br><br>
+Jika 1 buku tulis seharga Rp3.500, berapa harga untuk 2, 4, dan 6 buku? Sajikan dalam bentuk tabel.<br><br>
+Buat grafik dari tabel berikut:<br>
+Waktu (jam): 1, 2, 3, 4<br>
+Jarak (km): 50, 100, 150, 200
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana kamu tahu bahwa dua besaran memiliki hubungan senilai?</li>
+<li>Apa manfaat menggunakan tabel dan grafik dalam menyelesaikan masalah perbandingan?</li>
+<li>Bagian mana dari materi hari ini yang paling membantu kamu memahami konsep?</li>
+<li>Tuliskan satu hal baru yang kamu pelajari hari ini dan satu hal yang ingin kamu pelajari lebih lanjut.</li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+</body>
+</html>
