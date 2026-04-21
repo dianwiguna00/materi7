@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 22</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu melihat tulisan “untung 20%” atau “rugi 10%” dalam sebuah transaksi?</li>
+  <li>Menurutmu, apa bedanya mengetahui besar untung dan persentase untung?</li>
+  <li>Mengapa persentase sering digunakan untuk membandingkan keuntungan atau kerugian?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Menghitung persentase keuntungan penjual saat menjual barang lebih mahal dari harga beli.</li>
+  <li>Menentukan persentase kerugian ketika barang dijual lebih murah dari harga beli.</li>
+  <li>Membandingkan keuntungan dua penjual yang memiliki harga beli berbeda.</li>
+  <li>Memahami informasi persentase untung atau rugi dalam kegiatan jual beli sehari-hari.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Memahami konsep persentase untung dan rugi.</li>
+  <li>Menggunakan rumus persentase untuk menyelesaikan masalah kontekstual.</li>
+  <li>Menafsirkan hasil perhitungan dalam konteks transaksi jual beli.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati beberapa contoh transaksi jual beli yang menghasilkan untung atau rugi.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menentukan besar dan persentase untung atau rugi pada tiap kasus.</li>
+  <li>Siswa mencatat hasil diskusi dalam bentuk tabel sederhana.</li>
+  <li>Siswa mengerjakan latihan perhitungan persentase untung dan rugi secara mandiri.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep" style="white-space: pre-line;">
+<strong>Konsep:</strong>
+
+Persentase Untung = (Untung / Harga Beli) × 100%
+Persentase Rugi = (Rugi / Harga Beli) × 100%
+
+Catatan: Harga beli digunakan sebagai acuan dalam menghitung persentase.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh" style="white-space: pre-line;">
+<strong>✅ Contoh Soal</strong>
+
+Seorang pedagang membeli sepatu seharga Rp200.000 dan menjualnya seharga Rp250.000.
+
+Tentukan:
+Besar keuntungan.
+Persentase keuntungan.
+
+Penyelesaian:
+Untung = Rp250.000 - Rp200.000 = Rp50.000
+Persentase Untung = (50.000 / 200.000) × 100% = 25%
+
+✅ Jadi, pedagang mendapat untung 25%.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan" style="white-space: pre-line;">
+<strong>Latihan 1:</strong>
+Ani membeli tas seharga Rp180.000 dan menjualnya seharga Rp162.000.
+a. Apakah Ani mengalami untung atau rugi?
+b. Hitung besar untung/ruginya.
+c. Hitung persentase untung/ruginya.
+
+<strong>Latihan 2:</strong>
+Seorang penjual membeli 5 buah jam tangan dengan harga total Rp1.000.000. Ia menjual seluruhnya dengan harga Rp1.250.000.
+a. Hitung keuntungan total.
+b. Hitung persentase keuntungan.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Mengapa penting mengetahui persentase untung atau rugi dalam jual beli?</li>
+  <li>Bagaimana persentase ini membantu dalam membuat keputusan bisnis?</li>
+  <li>Pernahkah kamu mengalami situasi di mana kamu merasa rugi saat membeli sesuatu? Apa yang bisa dipelajari dari pengalaman itu?</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 10</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+<li>Saat sebuah garis miring memotong dua garis sejajar, apakah semua sudut yang terbentuk memiliki besar yang sama?</li>
+<li>Menurutmu, bagaimana cara mengetahui hubungan antar sudut tanpa harus mengukurnya satu per satu?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati garis marka jalan yang sejajar dipotong oleh jalan lain.</li>
+<li>Melihat susunan ubin lantai yang membentuk garis sejajar dengan garis potong.</li>
+<li>Mengamati rangka jendela atau pagar yang memiliki garis sejajar dan garis miring.</li>
+<li>Memperhatikan gambar rel kereta api yang dipotong oleh jalan penyeberangan.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+Siswa dapat mengidentifikasi dan menjelaskan hubungan antar sudut yang terbentuk oleh dua garis sejajar dan sebuah garis transversal, serta menyelesaikan soal berdasarkan hubungan tersebut.
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati gambar dua garis sejajar yang dipotong oleh sebuah garis transversal.</li>
+<li>Siswa berdiskusi dalam kelompok untuk mengidentifikasi pasangan sudut berdasarkan posisinya.</li>
+<li>Siswa menyampaikan hasil diskusi dengan menyebutkan hubungan antar sudut yang ditemukan.</li>
+<li>Siswa mengerjakan latihan individu untuk menentukan hubungan dan besar sudut berdasarkan gambar.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 Garis Sejajar dan Transversal<br>
+Garis sejajar: dua garis yang tidak pernah berpotongan.<br>
+Garis transversal: garis yang memotong dua garis sejajar.<br>
+Ketika sebuah garis transversal memotong dua garis sejajar, terbentuk 8 sudut yang memiliki hubungan khusus.<br><br>
+🔹 Jenis Hubungan Sudut:<br>
+Sudut Sehadap → sama besar<br>
+Sudut Berseberangan Dalam → sama besar<br>
+Sudut Bertolak Belakang → sama besar<br>
+Sudut Dalam Sepihak → jumlahnya 180°
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+✅ Contoh Soal 1:<br>
+Diketahui dua garis sejajar dipotong oleh garis transversal. Jika salah satu sudut sehadap adalah 65°, tentukan besar:<br>
+Sudut berseberangan dalam = 65°<br>
+Sudut bertolak belakang = 65°<br>
+Sudut dalam sepihak = 115°<br><br>
+✅ Contoh Soal 2: Kontekstual<br>
+Seorang arsitek menggambar dua dinding sejajar yang dipotong oleh garis atap miring. Jika sudut antara dinding dan atap adalah 110°, berapa besar sudut sehadapnya?<br>
+Jawaban: 110°
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+Diketahui dua garis sejajar dipotong oleh transversal. Jika salah satu sudut adalah 70°, tentukan besar:<br>
+a. Sudut sehadap<br>
+b. Sudut bertolak belakang<br>
+c. Sudut dalam sepihak<br><br>
+Jika sudut dalam sepihak adalah 120°, berapa besar sudut pasangannya?<br><br>
+Gambarlah dua garis sejajar dan sebuah transversal, lalu tandai dan beri nama:<br>
+a. Sepasang sudut sehadap<br>
+b. Sepasang sudut berseberangan dalam<br>
+c. Sepasang sudut dalam sepihak<br><br>
+Jelaskan hubungan antara sudut A dan sudut B jika diketahui mereka adalah sudut bertolak belakang dan sudut A = 85°.
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+<li>Apa hubungan sudut yang paling mudah kamu pahami? Mengapa?</li>
+<li>Bagaimana kamu bisa membedakan sudut sehadap dan sudut dalam sepihak?</li>
+<li>Dalam kehidupan nyata, di mana kamu bisa menemukan contoh dua garis sejajar dan transversal?</li>
+<li>Tuliskan satu hal baru yang kamu pelajari hari ini dan satu hal yang masih ingin kamu tanyakan.</li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+</body>
+</html>

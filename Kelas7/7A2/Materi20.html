@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 20</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu mengumpulkan data dari lingkungan sekitar, misalnya jumlah siswa atau benda di kelas?</li>
+<li>Mengapa data yang sudah dikumpulkan perlu disusun agar mudah dibaca dan dipahami?</li>
+<li>Menurutmu, apa manfaat menyajikan data dalam bentuk tabel dibandingkan daftar biasa?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengumpulkan data jumlah jenis kendaraan yang digunakan siswa ke sekolah.</li>
+<li>Mencatat jumlah buku atau alat tulis yang dimiliki teman sekelas.</li>
+<li>Menghitung dan mencatat jumlah tanaman di taman sekolah.</li>
+<li>Menyusun data hasil pengamatan sederhana dari lingkungan rumah atau sekolah.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat mengumpulkan data dari lingkungan sekitar, menyusunnya dalam bentuk tabel, dan menyajikannya dalam bentuk grafik batang sederhana.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa melakukan pengamatan langsung di lingkungan sekitar untuk mengumpulkan data sederhana.</li>
+<li>Siswa berdiskusi dalam kelompok untuk menyusun data yang diperoleh ke dalam tabel.</li>
+<li>Siswa mempresentasikan tabel data hasil pengamatan kelompoknya.</li>
+<li>Siswa mengerjakan latihan individu menyusun tabel dari data yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Data adalah informasi yang dikumpulkan dari pengamatan, pengukuran, atau survei.<br>
+Tabel: Menyusun data secara sistematis.<br>
+Grafik batang: Menampilkan data secara visual untuk memudahkan perbandingan.<br><br>
+Langkah-langkah:<br>
+Tentukan objek pengamatan.<br>
+Catat data dalam bentuk tabel.<br>
+Sajikan data dalam bentuk grafik batang.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal:</strong><br>
+Seorang siswa mengukur luas beberapa bangun datar yang digambar di buku. Hasilnya:<br>
+Persegi Panjang: 96 cm²<br>
+Segitiga: 30 cm²<br>
+Lingkaran: 78,5 cm²<br>
+Jajar Genjang: 60 cm²<br>
+Belah Ketupat: 48 cm²
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Lakukan pengukuran terhadap 5 benda di rumah atau sekolah yang berbentuk bangun datar. Catat luasnya dalam tabel.</li>
+<li>Buat grafik batang berdasarkan data yang kamu kumpulkan.</li>
+<li>Bandingkan luas bangun datar tersebut: mana yang paling luas dan mana yang paling kecil?</li>
+<li>Jelaskan bagaimana kamu mengukur atau memperkirakan luas masing-masing benda.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa manfaat menyajikan data dalam bentuk grafik?</li>
+<li>Bagaimana kamu menentukan cara mengukur luas dari benda nyata?</li>
+<li>Bagian mana dari proses pengumpulan dan penyajian data yang paling kamu nikmati?</li>
+<li>Tuliskan satu pengalamanmu mengumpulkan dan menyajikan data hari ini, serta apa yang kamu pelajari dari grafik yang kamu buat.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

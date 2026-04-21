@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 18</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu menghitung luas atau keliling suatu taman, lapangan, atau halaman rumah?</li>
+<li>Jika sebuah bentuk digabung dari beberapa bangun datar, bagaimana caramu menentukan luasnya?</li>
+<li>Mengapa dalam kehidupan sehari-hari kita sering perlu menghitung keliling dan luas suatu area?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan luas dan keliling taman sekolah yang bentuknya tidak sederhana.</li>
+<li>Menghitung luas lantai dan keliling ruangan untuk memperkirakan kebutuhan keramik atau lis.</li>
+<li>Memperkirakan luas kolam, lapangan, atau area bermain di lingkungan sekitar.</li>
+<li>Menghitung bahan yang dibutuhkan untuk menutup atau membatasi suatu area.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat menerapkan rumus keliling dan luas berbagai bangun datar (segitiga, persegi panjang, jajar genjang, trapesium, belah ketupat, dan lingkaran) untuk menyelesaikan masalah kontekstual dalam kehidupan sehari-hari</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati gambar atau cerita masalah nyata yang melibatkan keliling dan luas bangun datar.</li>
+<li>Siswa berdiskusi dalam kelompok untuk menentukan bangun datar penyusunnya dan cara menghitungnya.</li>
+<li>Siswa menyajikan hasil diskusi kelompok tentang langkah penyelesaian masalah.</li>
+<li>Siswa mengerjakan latihan individu untuk menyelesaikan soal kontekstual keliling dan luas bangun datar.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Pada pertemuan ini, siswa mengintegrasikan pemahaman tentang:<br>
+Rumus keliling dan luas berbagai bangun datar<br>
+Pemilihan rumus yang sesuai berdasarkan bentuk bangun<br>
+Penerapan dalam situasi nyata seperti taman, kolam, lantai, dan benda sehari-hari<br><br>
+Kunci Pemahaman:<br>
+Identifikasi bentuk bangun dalam soal kontekstual<br>
+Gunakan satuan yang sesuai (cm, m, cm², m²)<br>
+Perhatikan apakah yang ditanyakan keliling, luas, atau keduanya
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Taman Berbentuk Trapesium</strong><br>
+Sebuah taman berbentuk trapesium memiliki sisi sejajar 12 m dan 8 m, tinggi 5 m, dan dua sisi lainnya masing-masing 6 m dan 7 m. Hitung:<br>
+Keliling taman<br>
+Luas taman<br>
+Penyelesaian:<br>
+Keliling = 12 + 8 + 6 + 7 = 33 m<br>
+Luas = ½ × (12 + 8) × 5 = ½ × 20 × 5 = 50 m²<br><br>
+
+<strong>Contoh Soal 2: Kolam Berbentuk Lingkaran</strong><br>
+Sebuah kolam berbentuk lingkaran memiliki diameter 10 m. Hitung:<br>
+Keliling kolam (π ≈ 3,14)<br>
+Luas kolam<br>
+Penyelesaian:<br>
+Keliling = π × d = 3,14 × 10 = 31,4 m<br>
+Luas = π × r² = 3,14 × 5² = 3,14 × 25 = 78,5 m²<br><br>
+
+<strong>Contoh Soal 3: Lantai Berbentuk Persegi Panjang</strong><br>
+Sebuah lantai memiliki panjang 6 m dan lebar 4 m. Hitung:<br>
+Keliling lantai<br>
+Luas lantai<br>
+Penyelesaian:<br>
+Keliling = 2 × (6 + 4) = 20 m<br>
+Luas = 6 × 4 = 24 m²
+
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah lapangan berbentuk jajar genjang memiliki alas 15 m, tinggi 8 m, dan sisi miring 10 m. Hitung keliling dan luasnya.</li>
+<li>Sebuah papan reklame berbentuk belah ketupat memiliki sisi 5 m, diagonal 1 = 6 m, dan diagonal 2 = 8 m. Hitung keliling dan luasnya.</li>
+<li>Sebuah taman berbentuk lingkaran memiliki jari-jari 7 m. Hitung keliling dan luasnya (gunakan π = 22/7).</li>
+<li>Sebuah halaman rumah berbentuk segitiga memiliki alas 10 m, tinggi 6 m, dan dua sisi lainnya masing-masing 7 m dan 9 m. Hitung keliling dan luasnya.</li>
+<li>Buatlah gambar bangun datar dari lingkungan sekitar, lalu tentukan keliling dan luasnya berdasarkan ukuran yang kamu tentukan sendiri.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana kamu menentukan rumus yang tepat untuk menyelesaikan soal kontekstual?</li>
+<li>Apa tantangan yang kamu hadapi saat menerapkan rumus dalam soal cerita?</li>
+<li>Dalam kehidupan sehari-hari, kapan kamu perlu menghitung keliling dan luas suatu area?</li>
+<li>Tuliskan satu contoh nyata dari lingkunganmu yang melibatkan perhitungan keliling dan luas, lalu jelaskan bagaimana kamu menyelesaikannya.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 5</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat peta atau denah sekolah? Bagaimana caranya jarak yang jauh bisa digambar kecil?</li>
+<li>Mengapa ukuran ruangan pada denah rumah tampak lebih kecil dibandingkan ukuran aslinya?</li>
+<li>Saat melihat peta perjalanan, bagaimana kamu memperkirakan jarak sebenarnya dari gambar?</li>
+</ol>
+</div>
+
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+<li>Membaca peta untuk memperkirakan jarak rumah ke sekolah.</li>
+<li>Menggunakan denah rumah untuk mengetahui ukuran ruangan sebenarnya.</li>
+<li>Mengamati skala pada peta wisata atau atlas.</li>
+<li>Membandingkan ukuran model mainan dengan ukuran benda aslinya.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat menggunakan konsep perbandingan untuk menyelesaikan masalah yang berkaitan dengan skala dan peta, serta menginterpretasikan informasi dari gambar berskala.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati gambar peta atau denah yang ditampilkan guru dan mencatat informasi skala yang terlihat.</li>
+<li>Siswa berdiskusi dalam kelompok untuk menafsirkan makna skala pada gambar dan hubungannya dengan ukuran sebenarnya.</li>
+<li>Siswa mempresentasikan hasil diskusi kelompok tentang contoh penggunaan skala dalam kehidupan sehari-hari.</li>
+<li>Siswa mengerjakan latihan individu yang berkaitan dengan membaca dan menggunakan skala pada gambar atau denah sederhana.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 Apa itu Skala?<br>
+Skala adalah perbandingan antara ukuran pada gambar (peta, denah, model) dengan ukuran sebenarnya.<br><br>
+🔹 Bentuk Skala:<br>
+Ditulis sebagai rasio, misalnya: 1 : 100<br>
+Artinya 1 satuan pada gambar mewakili 100 satuan sebenarnya.<br>
+Satuan bisa dalam cm, m, km, dll, tergantung konteks.<br><br>
+🔹 Rumus Umum:<br>
+Ukuran sebenarnya = ukuran pada gambar × skala<br>
+Ukuran pada gambar = ukuran sebenarnya ÷ skala
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+✅ Contoh Soal 1:<br>
+Sebuah peta memiliki skala 1 : 100.000. Jika jarak antara dua kota pada peta adalah 3 cm, berapa jarak sebenarnya?<br>
+Penyelesaian:<br>
+Jarak sebenarnya = 3 cm × 100.000 = 300.000 cm = 3 km<br><br>
+✅ Contoh Soal 2:<br>
+Jarak sebenarnya antara dua kota adalah 5 km. Jika skala peta adalah 1 : 250.000, berapa jarak pada peta?<br>
+Penyelesaian:<br>
+Jarak pada peta = (5 km × 100.000 cm/km) ÷ 250.000 = 500.000 ÷ 250.000 = 2 cm
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah denah rumah memiliki skala 1 : 100. Jika panjang ruang tamu pada denah adalah 5 cm, berapa panjang sebenarnya?</li>
+<li>Jarak antara dua kota adalah 12 km. Jika skala peta adalah 1 : 400.000, berapa jarak pada peta?</li>
+<li>Sebuah model mobil dibuat dengan skala 1 : 20. Jika panjang mobil asli adalah 4 meter, berapa panjang modelnya?</li>
+<li>Sebuah taman digambar dalam denah dengan panjang 6 cm dan skala 1 : 200. Berapa panjang taman sebenarnya?</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+<li>Mengapa skala penting dalam peta dan denah?</li>
+<li>Apa tantangan yang kamu hadapi saat mengubah ukuran gambar menjadi ukuran sebenarnya?</li>
+<li>Bagaimana kamu bisa menggunakan konsep skala dalam kehidupan sehari-hari?</li>
+<li>Tuliskan satu pengalamanmu menggunakan peta atau denah, dan bagaimana kamu bisa menerapkan konsep skala di dalamnya.</li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+</body>
+</html>
